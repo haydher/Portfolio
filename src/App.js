@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from "react";
 import { ProjectsContainer } from "./components/ProjectsContainer";
 import { About } from "./components/About";
 import { MouseFollowStyle } from "./components/styles/MouseFollowStyle";
+import { Contact } from "./components/Contact";
 
 const App = () => {
  useEffect(() => {
@@ -64,6 +65,7 @@ const App = () => {
     <Main />
     <ProjectsContainer height={height} />
     <About height={height} />
+    <Contact height={height} />
     {/* <section style={{ height: "200vh", width: "90vw", background: "red" }}>asd</section> */}
    </div>
   </ThemeProvider>

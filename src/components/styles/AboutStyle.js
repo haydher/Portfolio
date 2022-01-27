@@ -11,16 +11,20 @@ export const AboutStyle = styled.section`
   color: ${({ theme }) => theme.textColor};
   font-size: 2rem;
 
+  h1 {
+   font-size: 2rem;
+  }
+
   ::after {
    content: "";
    position: absolute;
-   top: calc(${({ height }) => height.height}px + 50px);
-   left: 14.5rem;
+   top: calc(${({ height }) => height.height}px + 40px);
+   left: 11rem;
    transform: translateY(-50%);
    background-color: ${({ theme }) => theme.textColor};
    opacity: 0.8;
    height: 2px;
-   width: 44.5vw;
+   width: 47vw;
    border-radius: 100px;
   }
  }

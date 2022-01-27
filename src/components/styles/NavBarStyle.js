@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavBarStyle = styled.nav`
- background-color: black;
+ background-color: ${({ theme }) => theme.bgColor};
  position: fixed;
  left: 0;
  right: 0;

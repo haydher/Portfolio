@@ -26,7 +26,10 @@ export const Hero = () => {
       {/* <button className="btn CTA">
        Contact <img src="imgs/msg.svg" alt="A message icon" />
       </button> */}
-      <Button btnText="Contact" btnClass="CTA" imgSrc={<Arrow />} />
+      <a href="#contact">
+       <Button btnText="Contact" btnClass="CTA" imgSrc={<Arrow />} />
+      </a>
+
       <Button btnText="Resume" btnClass="resume" />
      </div>
      <div className="heroLinks" data-aos="fade-right" data-aos-delay="300">

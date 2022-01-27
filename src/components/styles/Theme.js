@@ -4,6 +4,8 @@ export const darkTheme = {
  textColor: "#efefef",
 
  bgColor: "#222526",
+ bgColor2: "#30343C",
+ bgColor3: "#434956",
 
  width: "1080px",
 
