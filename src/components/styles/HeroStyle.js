@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const HeroStyle = styled.div`
  display: flex;
-
  .heroLeft {
   display: flex;
   align-items: center;

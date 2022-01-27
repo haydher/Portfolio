@@ -41,6 +41,7 @@ export const ProjectsStyle = styled.div`
    color: ${({ theme }) => theme.textColor};
    border-radius: 4px;
    padding: 1.5rem;
+   line-height: 1.5rem;
   }
 
   .techContainer {

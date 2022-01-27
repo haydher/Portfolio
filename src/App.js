@@ -6,8 +6,10 @@ import { Main } from "./components/Main";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ProjectsContainer } from "./components/ProjectsContainer";
+import { About } from "./components/About";
+import { MouseFollowStyle } from "./components/styles/MouseFollowStyle";
 
 const App = () => {
  useEffect(() => {
@@ -25,22 +27,44 @@ const App = () => {
    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
    offset: 120, // offset (in px) from the original trigger point
    delay: 0, // values from 0 to 3000, with step 50ms
-   duration: 600, // values from 0 to 3000, with step 50ms
+   duration: 400, // values from 0 to 3000, with step 50ms
    easing: "ease-out", // default easing for AOS animations
    once: true, // whether animation should happen only once - while scrolling down
    mirror: false, // whether elements should animate out while scrolling past them
    anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
+
+  getNavHeight();
+
+  // window.addEventListener("mousemove", mouseFollow);
+  // return () => {
+  //  window.removeEventListener("mousemove", mouseFollow);
+  // };
  }, []);
+
+ // move the circle div as a mouse around
+ const divRef = useRef();
+ const mouseFollow = (e) => {
+  divRef.current.style.top = `${e.clientY}px`;
+  divRef.current.style.left = `${e.clientX}px`;
+ };
+
+ // get height of nav since fixed. help push down anchor links
+ const [height, setHeight] = useState(0);
+ const getNavHeight = () => {
+  setHeight(document.querySelector("nav").offsetHeight);
+ };
 
  return (
   <ThemeProvider theme={darkTheme}>
    <GlobalComponents />
    <div className="App">
+    {/* <MouseFollowStyle ref={divRef}></MouseFollowStyle> */}
     <Nav />
     <Main />
-    <ProjectsContainer />
-    <section style={{ height: "200vh", width: "90vw", background: "red" }}>asd</section>
+    <ProjectsContainer height={height} />
+    <About height={height} />
+    {/* <section style={{ height: "200vh", width: "90vw", background: "red" }}>asd</section> */}
    </div>
   </ThemeProvider>
  );

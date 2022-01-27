@@ -30,9 +30,9 @@ const projectsObj = [
  },
 ];
 
-export const ProjectsContainer = () => {
+export const ProjectsContainer = ({ height }) => {
  return (
-  <ProjectsContainerStyle id="projects">
+  <ProjectsContainerStyle id="projects" height={height}>
    <h1 className="title">Projects</h1>
    {projectsObj.map((project) => {
     return (

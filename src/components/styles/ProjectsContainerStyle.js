@@ -7,7 +7,8 @@ export const ProjectsContainerStyle = styled.section`
 
  .title {
   position: sticky;
-  top: 100px;
+  top: ${({ height }) => height + 20}px;
+  margin-bottom: ${({ height }) => height + 20}px;
   bottom: 100px;
   color: ${({ theme }) => theme.textColor};
   font-size: 2rem;
