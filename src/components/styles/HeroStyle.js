@@ -30,12 +30,12 @@ export const HeroStyle = styled.div`
     user-select: none;
    }
 
-   ::after {
+   /* ::after {
     content: url("../imgs/pointer.svg");
     position: absolute;
     top: -50%;
     right: 10%;
-   }
+   } */
   }
 
   .title {
@@ -52,42 +52,42 @@ export const HeroStyle = styled.div`
     :nth-child(1) {
      stroke-dasharray: 388.448;
      stroke-dashoffset: 388.448;
-     animation: stroke 1.5s ease forwards, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 0.8s, fill 1s ease forwards 2.5s;
     }
     :nth-child(2) {
      stroke-dasharray: 211.225;
      stroke-dashoffset: 211.225;
-     animation: stroke 1.5s ease forwards 0.2s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 0.9s, fill 1s ease forwards 2.5s;
     }
     :nth-child(3) {
      stroke-dasharray: 242.128;
      stroke-dashoffset: 242.128;
-     animation: stroke 1.5s ease forwards 0.4s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1s, fill 1s ease forwards 2.5s;
     }
     :nth-child(4) {
      stroke-dasharray: 277.114;
      stroke-dashoffset: 277.114;
-     animation: stroke 1.5s ease forwards 0.6s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1.1s, fill 1s ease forwards 2.5s;
     }
     :nth-child(5) {
      stroke-dasharray: 211.226;
      stroke-dashoffset: 211.226;
-     animation: stroke 1.5s ease forwards 0.8s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1.2s, fill 1s ease forwards 2.5s;
     }
     :nth-child(6) {
      stroke-dasharray: 163.876;
      stroke-dashoffset: 163.876;
-     animation: stroke 1.5s ease forwards 1s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1.3s, fill 1s ease forwards 2.5s;
     }
     :nth-child(7) {
      stroke-dasharray: 211.225;
      stroke-dashoffset: 211.225;
-     animation: stroke 1.5s ease forwards 1.2s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1.4s, fill 1s ease forwards 2.5s;
     }
     :nth-child(8) {
      stroke-dasharray: 122.836;
      stroke-dashoffset: 122.836;
-     animation: stroke 1.5s ease forwards 1.4s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1.5s, fill 1s ease forwards 2.5s;
     }
     :nth-child(9) {
      stroke-dasharray: 189.003;
@@ -97,17 +97,17 @@ export const HeroStyle = styled.div`
     :nth-child(10) {
      stroke-dasharray: 241.904;
      stroke-dashoffset: 241.904;
-     animation: stroke 1.5s ease forwards 1.8s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1.7s, fill 1s ease forwards 2.5s;
     }
     :nth-child(11) {
      stroke-dasharray: 211.226;
      stroke-dashoffset: 211.226;
-     animation: stroke 1.5s ease forwards 2s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1.8s, fill 1s ease forwards 2.5s;
     }
     :nth-child(12) {
      stroke-dasharray: 126.39;
      stroke-dashoffset: 126.39;
-     animation: stroke 1.5s ease forwards 2.2s, fill 1s ease forwards 2.5s;
+     animation: stroke 1.5s ease forwards 1.9s, fill 1s ease forwards 2.5s;
     }
 
     @keyframes stroke {
@@ -204,23 +204,6 @@ export const HeroStyle = styled.div`
   .heroLinks {
    display: flex;
    margin-top: 2.5rem;
-
-   a {
-    margin-right: 1rem;
-   }
-   .linkBtn {
-    background-color: ${({ theme }) => theme.secondaryColor};
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8rem;
-    /* margin-right: 1rem; */
-    border-radius: 100px;
-
-    img {
-     height: 0.8rem;
-    }
-   }
   }
  }
 

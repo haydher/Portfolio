@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const NavBarStyle = styled.nav`
- position: absolute;
+ position: fixed;
  left: 0;
  right: 0;
+ top: 0;
  display: flex;
  justify-content: space-between;
  max-width: ${({ theme }) => theme.width};
  padding: 1.5rem 0;
  margin: auto;
+ z-index: 5;
 
  .logo {
   font-size: 1.5rem;

@@ -6,4 +6,6 @@ export const darkTheme = {
  bgColor: "#222526",
 
  width: "1080px",
+
+ titleDelay: "0.2",
 };
