@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HeroStyle = styled.div`
  display: flex;
+
  .heroLeft {
   display: flex;
   align-items: center;
@@ -44,7 +45,7 @@ export const HeroStyle = styled.div`
    font-weight: 600;
    margin-top: 3rem;
 
-   svg path {
+   #webDevTitle path {
     stroke: ${({ theme }) => theme.primaryColor};
     fill: transparent;
 

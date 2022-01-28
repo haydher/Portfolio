@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import blur from "../../assets/imgs/blur.png";
 
 export const AboutStyle = styled.section`
- width: ${({ theme }) => theme.width};
- margin: auto;
+ width: auto;
  height: 100vh;
+
+ .aboutPageContainer {
+  width: ${({ theme }) => theme.width};
+  margin: auto;
+ }
 
  .title {
   position: relative;
@@ -30,11 +35,19 @@ export const AboutStyle = styled.section`
  }
 
  .aboutContainer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70%;
   color: ${({ theme }) => theme.textColor};
+
+  ::before {
+   content: url(${blur});
+   position: absolute;
+   left: -30%;
+   top: -0%;
+  }
 
   .aboutInfo {
    margin-top: 3rem;

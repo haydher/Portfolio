@@ -17,7 +17,7 @@ export const Hero = () => {
       <img className="blur" src="./imgs/blur.png" alt="background image" draggable="false" />
      </div>
      <div className="title">
-      <Title />
+      <Title id="webDevTitle" />
      </div>
      <div className="description" data-aos="fade-right" data-aos-delay="100">
       <p>Full Stack Developer | UI Designer | UX Designer</p>
