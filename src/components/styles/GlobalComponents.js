@@ -9,6 +9,25 @@ export const GlobalComponents = createGlobalStyle`
   scroll-behavior: smooth;
  }
 
+ /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666; 
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
+}
+
  a:link,
  a:visited,
  a:hover,

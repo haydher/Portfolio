@@ -51,22 +51,20 @@ const App = () => {
  };
 
  // get height of nav since fixed. help push down anchor links
+ const navRef = useRef(null);
  const [height, setHeight] = useState(0);
- const getNavHeight = () => {
-  setHeight(document.querySelector("nav").offsetHeight);
- };
+ const getNavHeight = () => setHeight(navRef.current.offsetHeight);
 
  return (
   <ThemeProvider theme={darkTheme}>
    <GlobalComponents />
    <div className="App">
     {/* <MouseFollowStyle ref={divRef}></MouseFollowStyle> */}
-    <Nav />
+    <Nav id="nav" ref={navRef} />
     <Main />
     <ProjectsContainer height={height} />
     <About height={height} />
     <Contact height={height} />
-    {/* <section style={{ height: "200vh", width: "90vw", background: "red" }}>asd</section> */}
    </div>
   </ThemeProvider>
  );

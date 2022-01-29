@@ -1,9 +1,10 @@
+import React from "react";
 import { NavBarStyle } from "./styles/NavBarStyle";
 
-export const Nav = () => {
+export const Nav = React.forwardRef(({}, navRef) => {
  return (
   <NavBarStyle>
-   <div className="navContainer">
+   <div className="navContainer" ref={navRef}>
     <div className="logo">
      <h1>Haydher</h1>
     </div>
@@ -24,4 +25,4 @@ export const Nav = () => {
    </div>
   </NavBarStyle>
  );
-};
+});

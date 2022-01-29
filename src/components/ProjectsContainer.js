@@ -1,3 +1,6 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
 import { ProjectsContainerStyle } from "./styles/ProjectsContainerStyle";
 import { Projects } from "./Projects";
 import NitroBg from "../assets/imgs/nitroBg.png";
@@ -31,12 +34,46 @@ const projectsObj = [
 ];
 
 export const ProjectsContainer = ({ height }) => {
+ const title = useRef(null);
+ const titleContainer = useRef(null);
+
+ useEffect(() => {
+  const elemHeight = titleContainer.current;
+  // get the parent element of the div to get the nav
+  const navHeight = elemHeight.parentElement.firstChild.offsetHeight;
+  const end = elemHeight.offsetHeight - elemHeight.lastChild.offsetHeight;
+  console.log("end", end);
+  console.log("elemHeight.lastChild", elemHeight.lastChild);
+
+  titleSticky(navHeight, end);
+
+  return () => {
+   // titleSticky.scrollTrigger.kill();
+  };
+ }, [height]);
+
+ const titleSticky = (navHeight, end) => {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(titleContainer.current, {
+   scrollTrigger: {
+    trigger: title.current,
+    pin: true, // pin the trigger element while active
+    start: `top ${navHeight}`, // when the top of the trigger hits the top of the viewport
+    end: `${end}`, // end after scrolling 500px beyond the start
+    pinSpacing: false,
+   },
+  });
+ };
+
  return (
-  <ProjectsContainerStyle id="projects" height={height}>
-   <h1 className="title">Projects</h1>
-   {projectsObj.map((project) => {
+  <ProjectsContainerStyle ref={titleContainer} id="projects" height={height}>
+   <h1 className="title" ref={title}>
+    Projects
+   </h1>
+   {projectsObj.map((project, index) => {
     return (
      <Projects
+      key={index}
       side={project.side}
       imgSrc={project.imgSrc}
       title={project.title}

@@ -2,14 +2,10 @@ import styled from "styled-components";
 
 export const ProjectsContainerStyle = styled.section`
  width: ${({ theme }) => theme.width};
- margin: 2rem auto 0 auto;
- /* padding-top: 9rem; */
+ margin: -3rem auto 0 auto;
+ padding-top: 3rem;
 
  .title {
-  position: sticky;
-  top: ${({ height }) => height + 20}px;
-  margin-bottom: ${({ height }) => height + 20}px;
-  bottom: 100px;
   color: ${({ theme }) => theme.textColor};
   font-size: 2rem;
 

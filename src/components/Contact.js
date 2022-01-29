@@ -43,7 +43,7 @@ export const Contact = ({ height }) => {
     <h1>Contact</h1>
    </div>
    <div className="aboutContainer">
-    <div className="contactInfo">
+    <div className="contactInfo" data-aos="fade-right">
      <h1>Lets Chat!</h1>
      <p>Got a question, or proposal, or just want to say hello? Send me a message!</p>
 
@@ -60,11 +60,11 @@ export const Contact = ({ height }) => {
       </div>
      </div>
      <div className="linksContainer">
-      <SecondaryBtn link="github.com" img="github" margin="0 1rem 0 0" />
-      <SecondaryBtn link="linkedin.com" img="linkedin" />
+      <SecondaryBtn link="https://github.com/haydher" img="Github" margin="0 1rem 0 0" />
+      <SecondaryBtn link="https://www.linkedin.com/in/haydher/" img="Linkedin" />
      </div>
     </div>
-    <div className="contactForm">
+    <div className="contactForm" data-aos="fade-left">
      <h1 className="header">Send me a message</h1>
      <div className="flexContainer">
       <div className="inputContainer">

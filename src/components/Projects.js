@@ -3,6 +3,7 @@ import { ProjectsStyle } from "./styles/ProjectsStyle";
 
 export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
  const fadeDelay = 50;
+
  return (
   <ProjectsStyle titleColor={title[2]} side={side}>
    <div className="imgContainer" data-aos={side === "left" ? "fade-right" : "fade-left"}>
@@ -28,8 +29,8 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
      data-aos-delay={fadeDelay + 200}
     >
      <ul>
-      {tech.map((tech) => {
-       return <li>{tech} </li>;
+      {tech.map((tech, index) => {
+       return <li key={index}>{tech} </li>;
       })}
      </ul>
     </div>
@@ -38,8 +39,15 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
      data-aos={side === "right" ? "fade-right" : "fade-left"}
      data-aos-delay={fadeDelay + 300}
     >
-     {links.map((link) => {
-      return <SecondaryBtn img={link[0]} link={link[1]} margin={side === "right" ? "0 1rem 0 0 " : "  0 0 0 1rem"} />;
+     {links.map((link, index) => {
+      return (
+       <SecondaryBtn
+        key={index}
+        img={link[0]}
+        link={link[1]}
+        margin={side === "right" ? "0 1rem 0 0 " : "  0 0 0 1rem"}
+       />
+      );
      })}
     </div>
    </div>

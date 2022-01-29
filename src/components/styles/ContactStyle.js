@@ -40,7 +40,7 @@ export const ContactStyle = styled.section`
    h1 {
     color: ${({ theme }) => theme.primaryColor};
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
    }
 
    .emailContainer {
@@ -49,7 +49,7 @@ export const ContactStyle = styled.section`
     display: flex;
     align-items: center;
     width: 70%;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     padding: 1rem;
     border-radius: 10px;
     cursor: pointer;
@@ -126,7 +126,7 @@ export const ContactStyle = styled.section`
 
    .linksContainer {
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
    }
   }
  }
