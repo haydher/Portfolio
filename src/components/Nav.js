@@ -6,7 +6,9 @@ export const Nav = React.forwardRef(({}, navRef) => {
   <NavBarStyle>
    <div className="navContainer" ref={navRef}>
     <div className="logo">
-     <h1>Haydher</h1>
+     <a href="/">
+      <h1>Haydher</h1>
+     </a>
     </div>
     <ul>
      <li className="active">

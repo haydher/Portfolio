@@ -1,10 +1,9 @@
 import { ReactComponent as EmailIcon } from "../assets/icons/email.svg";
 import { ReactComponent as Clipboard } from "../assets/icons/clipboard.svg";
-import { ReactComponent as CheckMark } from "../assets/icons/checkmark.svg";
-import { Button } from "./Button";
 import { SecondaryBtn } from "./SecondaryBtn";
 import { ContactStyle } from "./styles/ContactStyle";
 import { useEffect, useState } from "react";
+import { ContactForm } from "./ContactForm";
 
 export const Contact = ({ height }) => {
  const email = "email@email.com";
@@ -24,18 +23,6 @@ export const Contact = ({ height }) => {
   navigator.clipboard.writeText(email);
   setClipboard(true);
  };
-
- // show a check mark when message is sent
- const [msgSend, setMsgSend] = useState(false);
-
- const sendMessage = () => setMsgSend(true);
-
- useEffect(() => {
-  const timer = setTimeout(() => {
-   setMsgSend(false);
-  }, 4000);
-  return () => clearTimeout(timer);
- }, [msgSend]);
 
  return (
   <ContactStyle height={height} id="contact" clipboard={clipboard}>
@@ -64,29 +51,7 @@ export const Contact = ({ height }) => {
       <SecondaryBtn link="https://www.linkedin.com/in/haydher/" img="Linkedin" />
      </div>
     </div>
-    <div className="contactForm" data-aos="fade-left">
-     <h1 className="header">Send me a message</h1>
-     <div className="flexContainer">
-      <div className="inputContainer">
-       <input type="text" placeholder=" " name="name" />
-       <span className="placeholder">Full Name*</span>
-      </div>
-      <div className="inputContainer">
-       <input type="email" placeholder=" " name="email" />
-       <span className="placeholder">Email*</span>
-      </div>
-     </div>
-
-     <div className="inputContainer">
-      <textarea placeholder=" " name="message" />
-      <span className="placeholder">Message*</span>
-     </div>
-
-     <div className="sendBtn">
-      <Button btnText="Send" onClick={sendMessage} />
-      <div className="checkMarkContainer">{msgSend && <CheckMark className="svgCheck" />}</div>
-     </div>
-    </div>
+    <ContactForm />
    </div>
   </ContactStyle>
  );

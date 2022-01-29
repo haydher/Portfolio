@@ -144,6 +144,22 @@ export const ContactStyle = styled.section`
    margin-bottom: 2.5rem;
   }
 
+  .error {
+   box-sizing: border-box;
+   border: 3px solid red;
+   border-radius: 10px;
+
+   .placeholder {
+    color: red !important;
+    font-weight: 600;
+   }
+
+   input:focus,
+   textarea:focus {
+    outline: 2px solid red;
+   }
+  }
+
   .flexContainer {
    display: flex;
    justify-content: space-between;

@@ -6,8 +6,10 @@ export const ProjectsContainerStyle = styled.section`
  padding-top: 3rem;
 
  .title {
+  background-color: ${({ theme }) => theme.bgColor};
   color: ${({ theme }) => theme.textColor};
   font-size: 2rem;
+  padding: 1rem 0;
 
   ::after {
    content: "";

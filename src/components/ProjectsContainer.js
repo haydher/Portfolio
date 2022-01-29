@@ -41,9 +41,7 @@ export const ProjectsContainer = ({ height }) => {
   const elemHeight = titleContainer.current;
   // get the parent element of the div to get the nav
   const navHeight = elemHeight.parentElement.firstChild.offsetHeight;
-  const end = elemHeight.offsetHeight - elemHeight.lastChild.offsetHeight;
-  console.log("end", end);
-  console.log("elemHeight.lastChild", elemHeight.lastChild);
+  const end = elemHeight.lastChild.offsetHeight + 50;
 
   titleSticky(navHeight, end);
 
@@ -58,7 +56,7 @@ export const ProjectsContainer = ({ height }) => {
    scrollTrigger: {
     trigger: title.current,
     pin: true, // pin the trigger element while active
-    start: `top ${navHeight}`, // when the top of the trigger hits the top of the viewport
+    start: `top ${navHeight - 5}`, // when the top of the trigger hits the top of the viewport
     end: `${end}`, // end after scrolling 500px beyond the start
     pinSpacing: false,
    },
