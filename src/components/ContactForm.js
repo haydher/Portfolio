@@ -3,9 +3,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button } from "./Button";
 import { ReactComponent as CheckMark } from "../assets/icons/checkmark.svg";
+import { submitForm } from "../utils";
 
 export const ContactForm = ({}) => {
  //
+
  // form validation
  const { handleSubmit, handleChange, values, touched, errors, handleReset } = useFormik({
   initialValues: {
@@ -23,9 +25,11 @@ export const ContactForm = ({}) => {
    console.log("email", email);
    console.log("message", message);
 
-   //
-   showCheckMarkFun();
-   handleReset();
+   const result = submitForm({ fullName, email, message });
+   if (result === 1) {
+    showCheckMarkFun();
+    handleReset();
+   } else console.log("error sending mssg");
   },
  });
 
