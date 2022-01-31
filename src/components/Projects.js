@@ -7,7 +7,7 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
  return (
   <ProjectsStyle titleColor={title[2]} side={side}>
    <div className="imgContainer" data-aos={side === "left" ? "fade-right" : "fade-left"}>
-    <img src={imgSrc} alt="Background image for project" />
+    <img src={imgSrc} alt="Background for project" />
    </div>
    <div className="projectInfo">
     <div className="projectTitle" data-aos={side === "right" ? "fade-right" : "fade-left"}>

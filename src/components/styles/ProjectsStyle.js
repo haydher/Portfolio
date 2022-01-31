@@ -20,7 +20,7 @@ export const ProjectsStyle = styled.div`
   width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: ${({ side }) => side != "right" && "flex-end"};
+  align-items: ${({ side }) => side !== "right" && "flex-end"};
   margin: auto;
 
   .projectTitle {
@@ -37,7 +37,7 @@ export const ProjectsStyle = styled.div`
    background-color: ${({ theme }) => theme.secondaryColor};
    width: 130%;
    margin-bottom: 2rem;
-   text-align: ${({ side }) => side != "right" && "end"};
+   text-align: ${({ side }) => side !== "right" && "end"};
    color: ${({ theme }) => theme.textColor};
    border-radius: 4px;
    padding: 1.5rem;
@@ -52,7 +52,7 @@ export const ProjectsStyle = styled.div`
 
    ul {
     display: flex;
-    justify-content: ${({ side }) => side != "right" && "flex-end"};
+    justify-content: ${({ side }) => side !== "right" && "flex-end"};
     flex-wrap: wrap;
     list-style: none;
 
@@ -60,7 +60,7 @@ export const ProjectsStyle = styled.div`
      margin: ${({ side }) => (side === "right" ? "0  1rem 0 0" : "0 0 0 1rem")};
      padding: 0.5rem 0;
      :first-child {
-      margin: ${({ side }) => side != "right" && "0"};
+      margin: ${({ side }) => side !== "right" && "0"};
      }
     }
    }

@@ -51,7 +51,7 @@ export const About = (height) => {
      </div>
      <div className="aboutPic" data-aos="fade-left">
       <AboutFrame />
-      <img src={AboutPic} alt="Picture of Haydher in about section" />
+      <img src={AboutPic} alt="Author in about section" />
      </div>
     </div>
    </div>

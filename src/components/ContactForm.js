@@ -6,7 +6,7 @@ import { ReactComponent as CheckMark } from "../assets/icons/checkmark.svg";
 import { submitForm } from "../utils";
 import { ContactFormStyle } from "./styles/ContactFormStyle";
 
-export const ContactForm = ({}) => {
+export const ContactForm = () => {
  //
 
  // form validation
@@ -27,6 +27,7 @@ export const ContactForm = ({}) => {
    // set the error back to false to hide the error
    setFormError(false);
 
+   // get the result of the form
    const result = await submitForm({ fullName, email, message });
 
    if (result === 1) {
@@ -47,7 +48,7 @@ export const ContactForm = ({}) => {
  useEffect(() => {
   touched.email && errors.email ? setEmailError(true) : setEmailError(false);
   touched.message && errors.message ? setMessageError(true) : setMessageError(false);
- }, [errors.email, errors.message]);
+ }, [touched.email, touched.message, errors.email, errors.message]);
 
  // show error if form wasnt submitted successfully
  const [formError, setFormError] = useState(false);
@@ -69,7 +70,6 @@ export const ContactForm = ({}) => {
  };
 
  return (
-  // <ContactFormStyle data-aos="fade-left">
   <ContactFormStyle showCheckMark={showCheckMark}>
    <h1 className="header">Send me a message</h1>
    <form onSubmit={formSubmit}>
@@ -98,7 +98,7 @@ export const ContactForm = ({}) => {
      {formError && (
       <div className="formError">
        <p>Sorry, the form didn't submit.</p>
-       <p>Please send me aa email instead.</p>
+       <p>Please send me an email instead.</p>
       </div>
      )}
     </div>

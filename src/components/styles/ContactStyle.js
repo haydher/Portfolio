@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Clipboard from "../../assets/icons/clipboard.svg";
 
 export const ContactStyle = styled.section`
  width: ${({ theme }) => theme.width};
@@ -52,6 +51,8 @@ export const ContactStyle = styled.section`
     margin-top: 2.5rem;
     padding: 1rem;
     border-radius: 10px;
+    overflow: hidden;
+
     cursor: pointer;
 
     .emailIconContainer {
@@ -76,8 +77,8 @@ export const ContactStyle = styled.section`
       bottom: -80%;
      }
 
-     // show an indicator for confirm copy
-     ::before {
+     // changed the background to show copy confirm
+     ::after {
       content: "";
       position: absolute;
       background-color: ${({ theme }) => theme.primaryColor};
@@ -100,12 +101,25 @@ export const ContactStyle = styled.section`
      }
     }
 
-    .emailText {
-     margin-bottom: 5px;
-    }
-    .email {
-     color: ${({ theme }) => theme.primaryColor};
-     font-size: 1.2rem;
+    .emailTextContainer {
+     position: relative;
+     transform: ${({ clipboard }) => clipboard && "translateY(-150%)"};
+     transition: transform 0.2s cubic-bezier(0.71, 0.15, 0.76, 1.4);
+
+     .emailText {
+      margin-bottom: 5px;
+     }
+     .email {
+      color: ${({ theme }) => theme.primaryColor};
+      font-size: 1.2rem;
+     }
+
+     ::after {
+      content: "${({ copyText }) => copyText}";
+      position: absolute;
+      bottom: -120%;
+      font-weight: 600;
+     }
     }
 
     :hover {

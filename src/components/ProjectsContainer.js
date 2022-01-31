@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { ProjectsContainerStyle } from "./styles/ProjectsContainerStyle";
 import { Projects } from "./Projects";
 import NitroBg from "../assets/imgs/nitroBg.png";

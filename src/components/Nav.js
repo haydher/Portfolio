@@ -1,7 +1,7 @@
 import React from "react";
 import { NavBarStyle } from "./styles/NavBarStyle";
 
-export const Nav = React.forwardRef(({}, navRef) => {
+export const Nav = React.forwardRef((props, navRef) => {
  return (
   <NavBarStyle>
    <div className="navContainer" ref={navRef}>
