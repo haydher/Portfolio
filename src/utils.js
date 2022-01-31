@@ -8,15 +8,15 @@ export const submitForm = async (form) => {
    "Content-Type": "application/json",
   },
  };
+
  try {
   const url = "http://localhost:5000/";
   const req = await fetch(url, settings);
   const body = await req.json();
-  console.log("body", body.status);
-  console.log("form submited successfully");
-  return 1;
+  if (body.status === 200) return 1;
+  return 0;
  } catch (error) {
-  console.log("Unable to post form");
+  console.log("error submitting form", error);
   return 0;
  }
 };

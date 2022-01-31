@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { Button } from "./Button";
 import { ReactComponent as CheckMark } from "../assets/icons/checkmark.svg";
 import { submitForm } from "../utils";
+import { ContactFormStyle } from "./styles/ContactFormStyle";
 
 export const ContactForm = ({}) => {
  //
@@ -20,16 +21,22 @@ export const ContactForm = ({}) => {
    email: Yup.string().email().required(),
    message: Yup.string().required(),
   }),
-  onSubmit: ({ fullName, email, message }) => {
-   console.log("fullName", fullName);
-   console.log("email", email);
-   console.log("message", message);
+  onSubmit: async ({ fullName, email, message }) => {
+   // set spinner on pending when `send` is clicked
+   setShowCheckMark("pending");
+   // set the error back to false to hide the error
+   setFormError(false);
 
-   const result = submitForm({ fullName, email, message });
+   const result = await submitForm({ fullName, email, message });
+
    if (result === 1) {
-    showCheckMarkFun();
+    setShowCheckMark("success");
+    setFormError(false);
     handleReset();
-   } else console.log("error sending mssg");
+   } else {
+    setShowCheckMark(null);
+    setFormError(true);
+   }
   },
  });
 
@@ -41,16 +48,16 @@ export const ContactForm = ({}) => {
   touched.email && errors.email ? setEmailError(true) : setEmailError(false);
   touched.message && errors.message ? setMessageError(true) : setMessageError(false);
  }, [errors.email, errors.message]);
- //
 
+ // show error if form wasnt submitted successfully
+ const [formError, setFormError] = useState(false);
  // show a check mark when message is sent
- const [showCheckMark, setShowCheckMark] = useState(false);
- const showCheckMarkFun = () => setShowCheckMark(true);
+ const [showCheckMark, setShowCheckMark] = useState(null);
 
  // reset state to hide check mark
  useEffect(() => {
   const timer = setTimeout(() => {
-   setShowCheckMark(false);
+   showCheckMark === "success" && setShowCheckMark(null);
   }, 4000);
   return () => clearTimeout(timer);
  }, [showCheckMark]);
@@ -62,7 +69,8 @@ export const ContactForm = ({}) => {
  };
 
  return (
-  <div className="contactForm" data-aos="fade-left">
+  // <ContactFormStyle data-aos="fade-left">
+  <ContactFormStyle showCheckMark={showCheckMark}>
    <h1 className="header">Send me a message</h1>
    <form onSubmit={formSubmit}>
     <div className="flexContainer">
@@ -82,9 +90,19 @@ export const ContactForm = ({}) => {
 
     <div className="sendBtn">
      <Button btnText="Send" type="submit" />
-     <div className="checkMarkContainer">{showCheckMark && <CheckMark className="svgCheck" />}</div>
+     {showCheckMark && (
+      <div className="checkMarkContainer">
+       <CheckMark className="svgCheck" />
+      </div>
+     )}
+     {formError && (
+      <div className="formError">
+       <p>Sorry, the form didn't submit.</p>
+       <p>Please send me aa email instead.</p>
+      </div>
+     )}
     </div>
    </form>
-  </div>
+  </ContactFormStyle>
  );
 };
