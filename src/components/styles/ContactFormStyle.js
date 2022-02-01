@@ -15,17 +15,17 @@ export const ContactFormStyle = styled.div`
 
  .error {
   box-sizing: border-box;
-  border: 3px solid red;
+  border: 3px solid ${({ theme }) => theme.error};
   border-radius: 10px;
 
   .placeholder {
-   color: red !important;
+   color: ${({ theme }) => theme.error} !important;
    font-weight: 600;
   }
 
   input:focus,
   textarea:focus {
-   outline: 2px solid red;
+   outline: 2px solid ${({ theme }) => theme.error};
   }
  }
 
@@ -206,6 +206,25 @@ export const ContactFormStyle = styled.div`
       width: 0rem;
      }
     }
+   }
+  }
+ }
+
+ @media only screen and (min-width: 1080px) {
+  width: 1400px;
+
+  padding: 2.5rem;
+  width: 40%;
+
+  .header {
+   margin-bottom: 3rem;
+  }
+
+  .inputContainer {
+   margin-bottom: 3rem;
+
+   textarea {
+    height: 15rem;
    }
   }
  }

@@ -63,10 +63,6 @@ export const AboutStyle = styled.section`
       font-size: 1rem;
       width: 30%;
       position: relative;
-
-      :first-child {
-       content: "asd";
-      }
      }
      .skills {
       width: 65%;
@@ -103,6 +99,35 @@ export const AboutStyle = styled.section`
    @keyframes dash {
     to {
      stroke-dashoffset: 0;
+    }
+   }
+  }
+ }
+
+ @media only screen and (min-width: 1080px) {
+  /* width: 1400px; */
+  height: auto;
+
+  .aboutPageContainer {
+   width: 1400px;
+   margin: auto;
+  }
+
+  .aboutContainer {
+   .aboutInfo {
+    font-size: 1.2rem;
+    margin: 10rem 0 11rem 0;
+    line-height: 2rem;
+
+    .tech {
+     .techContainer {
+      h1 {
+       font-size: 1.2rem;
+      }
+      .skills {
+       line-height: 2.2rem;
+      }
+     }
     }
    }
   }

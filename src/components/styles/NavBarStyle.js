@@ -9,7 +9,7 @@ export const NavBarStyle = styled.nav`
  z-index: 5;
 
  .navContainer {
-  max-width: ${({ theme }) => theme.width};
+  width: ${({ theme }) => theme.width};
   margin: auto;
   padding: 1.5rem 0;
   display: flex;
@@ -49,5 +49,11 @@ export const NavBarStyle = styled.nav`
 
  ul li a:link {
   padding: 0.5rem 1rem;
+ }
+
+ @media only screen and (min-width: 1080px) {
+  .navContainer {
+   width: 1400px;
+  }
  }
 `;

@@ -144,4 +144,34 @@ export const ContactStyle = styled.section`
    }
   }
  }
+
+ @media only screen and (min-width: 1080px) {
+  width: 1400px;
+  height: auto;
+  .title {
+   ::after {
+    width: 49vw;
+   }
+  }
+
+  .aboutContainer {
+   margin: 10rem 0 11rem 0;
+
+   .contactInfo {
+    h1 {
+     font-size: 3rem;
+     margin-bottom: 3rem;
+    }
+
+    p {
+     font-size: 1.3rem;
+    }
+
+    .emailContainer {
+     margin-top: 3rem;
+     width: 60%;
+    }
+   }
+  }
+ }
 `;

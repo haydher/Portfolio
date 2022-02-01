@@ -29,13 +29,6 @@ export const HeroStyle = styled.div`
     z-index: -1;
     user-select: none;
    }
-
-   /* ::after {
-    content: url("../imgs/pointer.svg");
-    position: absolute;
-    top: -50%;
-    right: 10%;
-   } */
   }
 
   .title {
@@ -163,11 +156,11 @@ export const HeroStyle = styled.div`
 
     :hover::before {
      transform: translateX(0%);
-     transition: transform 0.4s ease-out;
+     transition: transform 0.3s ease-out;
     }
     :hover::after {
      transform: translateX(100%);
-     transition: transform 0.4s ease-out;
+     transition: transform 0.3s ease-out;
      color: white;
     }
    }
@@ -193,7 +186,7 @@ export const HeroStyle = styled.div`
 
     :hover::before {
      transform: translateX(0%);
-     transition: transform 0.4s ease-out;
+     transition: transform 0.3s ease-out;
     }
     :hover {
      color: black;
@@ -231,6 +224,44 @@ export const HeroStyle = styled.div`
    img {
     height: 300px;
     user-select: none;
+   }
+  }
+ }
+
+ @media only screen and (min-width: 1080px) {
+  /* width: 1400px; */
+
+  margin: 16rem 0;
+  .heroLeft {
+   width: 50%;
+
+   .heading,
+   .title,
+   .description,
+   .heroBtns {
+    margin-bottom: 3rem;
+   }
+
+   .heading {
+    font-size: 2.8rem;
+
+    .blur {
+     left: -80%;
+     height: 90vh;
+    }
+   }
+
+   #webDevTitle {
+    width: 45rem;
+    height: 6rem;
+   }
+
+   .description {
+    font-size: 1.2rem;
+   }
+
+   .heroLinks {
+    margin-top: 3rem;
    }
   }
  }

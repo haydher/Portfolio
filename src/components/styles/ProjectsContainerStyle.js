@@ -24,4 +24,8 @@ export const ProjectsContainerStyle = styled.section`
    border-radius: 100px;
   }
  }
+
+ @media only screen and (min-width: 1080px) {
+  width: 1400px;
+ }
 `;

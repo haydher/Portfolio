@@ -7,4 +7,9 @@ export const MainStyle = styled.section`
  margin: auto;
  width: ${({ theme }) => theme.width};
  height: 100vh;
+
+ @media only screen and (min-width: 1080px) {
+  width: 1400px;
+  justify-content: center;
+ }
 `;

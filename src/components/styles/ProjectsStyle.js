@@ -74,4 +74,38 @@ export const ProjectsStyle = styled.div`
    display: flex;
   }
  }
+
+ @media only screen and (min-width: 1080px) {
+  width: 1400px;
+  height: 65vh;
+  margin: 0rem 0;
+
+  .imgContainer {
+   width: 75%;
+  }
+  .projectInfo {
+   .projectTitle {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+   }
+
+   .descriptionContainer {
+    width: 150%;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    line-height: 1.7rem;
+   }
+
+   .techContainer {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+
+    ul {
+     li {
+      padding: 0.8rem 0;
+     }
+    }
+   }
+  }
+ }
 `;
