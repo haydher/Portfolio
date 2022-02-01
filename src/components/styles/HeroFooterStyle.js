@@ -67,4 +67,11 @@ export const HeroFooterStyle = styled.div`
    opacity: 0.2;
   }
  }
+
+ // for Full HD
+ @media only screen and (min-width: 1920px) {
+  padding: 8rem;
+  width: 1440px;
+  justify-content: center;
+ }
 `;

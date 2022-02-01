@@ -104,12 +104,29 @@ export const AboutStyle = styled.section`
   }
  }
 
- @media only screen and (min-width: 1080px) {
+ // for full HD
+ @media only screen and (min-width: 1920px) {
+  width: auto;
+  height: auto;
+
+  .aboutPageContainer {
+   width: 1440px;
+   margin: auto;
+  }
+
+  .aboutContainer {
+   height: auto;
+   margin: 4rem 0 6rem 0;
+  }
+ }
+
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) {
   /* width: 1400px; */
   height: auto;
 
   .aboutPageContainer {
-   width: 1400px;
+   width: 1440px;
    margin: auto;
   }
 

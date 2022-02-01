@@ -8,8 +8,14 @@ export const MainStyle = styled.section`
  width: ${({ theme }) => theme.width};
  height: 100vh;
 
- @media only screen and (min-width: 1080px) {
-  width: 1400px;
+ // for full HD
+ @media only screen and (min-width: 1920px) {
+  width: 1440px;
+  justify-content: flex-end;
+ }
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) {
+  width: 1440px;
   justify-content: center;
  }
 `;

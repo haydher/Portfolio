@@ -228,9 +228,8 @@ export const HeroStyle = styled.div`
   }
  }
 
- @media only screen and (min-width: 1080px) {
-  /* width: 1400px; */
-
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) {
   margin: 16rem 0;
   .heroLeft {
    width: 50%;

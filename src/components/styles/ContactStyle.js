@@ -145,8 +145,48 @@ export const ContactStyle = styled.section`
   }
  }
 
- @media only screen and (min-width: 1080px) {
-  width: 1400px;
+ /*  
+ // for full HD
+ @media only screen and (min-width: 1920px) {
+  background: green;
+  width: 1440px;
+  justify-content: center;
+ }
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) {
+  background: red;
+  justify-content: center;
+ } */
+
+ // for full HD
+ @media only screen and (min-width: 1920px) {
+  width: 1440px;
+  height: auto;
+
+  .aboutContainer {
+   margin: 6rem 0 11rem 0;
+
+   .contactInfo {
+    h1 {
+     font-size: 3rem;
+     margin-bottom: 3rem;
+    }
+
+    p {
+     font-size: 1.3rem;
+    }
+
+    .emailContainer {
+     margin-top: 3rem;
+     width: 60%;
+    }
+   }
+  }
+ }
+
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) {
+  width: 1440px;
   height: auto;
   .title {
    ::after {

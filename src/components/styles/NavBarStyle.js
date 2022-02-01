@@ -51,9 +51,16 @@ export const NavBarStyle = styled.nav`
   padding: 0.5rem 1rem;
  }
 
- @media only screen and (min-width: 1080px) {
+ // for full HD
+ @media only screen and (min-width: 1920px) {
   .navContainer {
-   width: 1400px;
+   width: 1440px;
+  }
+ }
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) {
+  .navContainer {
+   width: 1440px;
   }
  }
 `;

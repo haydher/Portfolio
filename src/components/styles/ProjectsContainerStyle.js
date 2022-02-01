@@ -26,6 +26,6 @@ export const ProjectsContainerStyle = styled.section`
  }
 
  @media only screen and (min-width: 1080px) {
-  width: 1400px;
+  width: 1440px;
  }
 `;

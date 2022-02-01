@@ -75,7 +75,8 @@ export const ProjectsStyle = styled.div`
   }
  }
 
- @media only screen and (min-width: 1080px) {
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) {
   width: 1400px;
   height: 65vh;
   margin: 0rem 0;
