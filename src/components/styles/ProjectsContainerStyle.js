@@ -25,7 +25,7 @@ export const ProjectsContainerStyle = styled.section`
   }
  }
 
- @media only screen and (min-width: 1080px) {
+ @media only screen and (min-width: 1920px) {
   width: 1440px;
  }
 `;
