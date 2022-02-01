@@ -210,7 +210,8 @@ export const ContactFormStyle = styled.div`
   }
  }
 
- @media only screen and (min-width: 1080px) {
+ // for full HD
+ @media only screen and (min-width: 1920px) {
   width: 1400px;
 
   padding: 2.5rem;

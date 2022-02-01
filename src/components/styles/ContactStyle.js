@@ -145,19 +145,6 @@ export const ContactStyle = styled.section`
   }
  }
 
- /*  
- // for full HD
- @media only screen and (min-width: 1920px) {
-  background: green;
-  width: 1440px;
-  justify-content: center;
- }
- // for Quad HD (2k)
- @media only screen and (min-width: 2560px) {
-  background: red;
-  justify-content: center;
- } */
-
  // for full HD
  @media only screen and (min-width: 1920px) {
   width: 1440px;
