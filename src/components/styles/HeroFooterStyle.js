@@ -69,9 +69,61 @@ export const HeroFooterStyle = styled.div`
  }
 
  // for Full HD
- @media only screen and (min-width: 1920px) {
+ @media only screen and (min-width: 1920px) and (max-width: 2560px) {
   padding: 8rem;
   width: 1440px;
   justify-content: center;
+ }
+
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) and (max-width: 3840px) {
+  padding: 12rem 0 0 0;
+  width: 1440px;
+  justify-content: center;
+ }
+ // UHD
+ @media only screen and (min-width: 3840px) {
+  width: 2160px;
+  padding: 3rem;
+  .circle {
+   height: 80px;
+   width: 50px;
+   border: 3px solid ${({ theme }) => theme.textColor};
+  }
+
+  .dot {
+   height: 5px;
+   width: 5px;
+   border: 5px solid ${({ theme }) => theme.textColor};
+   transform: translateY(15px);
+  }
+
+  @keyframes scrollWheel {
+   0% {
+    transform: translateY(15px);
+   }
+   100% {
+    transform: translateY(40px);
+   }
+  }
+
+  .pointer {
+   height: 20px;
+   width: 20px;
+   margin: 14px auto;
+   border: 3px solid ${({ theme }) => theme.textColor};
+   border-top: none;
+   border-left: none;
+   transform: rotate(45deg);
+  }
+
+  @keyframes opacity {
+   0% {
+    opacity: 1;
+   }
+   100% {
+    opacity: 0.2;
+   }
+  }
  }
 `;

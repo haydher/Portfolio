@@ -5,6 +5,7 @@ import { ProjectsContainerStyle } from "./styles/ProjectsContainerStyle";
 import { Projects } from "./Projects";
 import NitroBg from "../assets/imgs/nitroBg.png";
 import GoCryptoBg from "../assets/imgs/goCrypto.png";
+import { Title } from "./Title";
 
 const projectsObj = [
  {
@@ -54,7 +55,8 @@ export const ProjectsContainer = ({ height }) => {
   gsap.registerPlugin(ScrollTrigger);
   gsap.to(titleContainer.current, {
    scrollTrigger: {
-    trigger: title.current,
+    // trigger: title.current,
+    trigger: document.querySelector("#projects .title"),
     pin: true, // pin the trigger element while active
     start: `top ${navHeight - 5}`, // when the top of the trigger hits the top of the viewport
     end: `${end}`, // end after scrolling 500px beyond the start
@@ -65,9 +67,8 @@ export const ProjectsContainer = ({ height }) => {
 
  return (
   <ProjectsContainerStyle ref={titleContainer} id="projects" height={height}>
-   <h1 className="title" ref={title}>
-    Projects
-   </h1>
+   <Title height={height} titleText="Projects" />
+   {/* <h1 className="title">Projects</h1> */}
    {projectsObj.map((project, index) => {
     return (
      <Projects

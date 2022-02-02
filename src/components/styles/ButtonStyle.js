@@ -18,4 +18,9 @@ export const ButtonStyle = styled.button`
   margin-left: 1rem;
   cursor: pointer;
  }
+
+ @media only screen and (min-width: 3840px) {
+  padding: 1.5rem 4rem;
+  font-size: 2.2rem;
+ }
 `;

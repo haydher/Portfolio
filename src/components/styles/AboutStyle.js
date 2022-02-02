@@ -10,29 +10,33 @@ export const AboutStyle = styled.section`
   margin: auto;
  }
 
- .title {
+ /* .title {
   position: relative;
   padding-top: ${({ height }) => height.height + 20}px;
   color: ${({ theme }) => theme.textColor};
   font-size: 2rem;
+  background-color: red;
 
   h1 {
    font-size: 2rem;
+   width: fit-content;
+   background-color: purple;
   }
 
   ::after {
    content: "";
    position: absolute;
    top: calc(${({ height }) => height.height}px + 40px);
-   left: 11rem;
+   left: ${({ titleWidth }) => titleWidth + 20}px;
    transform: translateY(-50%);
    background-color: ${({ theme }) => theme.textColor};
    opacity: 0.8;
    height: 2px;
-   width: 47vw;
+   width: calc(100% - ${({ titleWidth }) => titleWidth + 20}px);
    border-radius: 100px;
+   background-color: green;
   }
- }
+ } */
 
  .aboutContainer {
   position: relative;
@@ -104,6 +108,22 @@ export const AboutStyle = styled.section`
   }
  }
 
+ // for HD
+ @media only screen and (min-width: 1024px) {
+  /* width: 1080px; */
+  width: auto;
+  height: auto;
+
+  .aboutPageContainer {
+   width: 1000px;
+   margin: auto;
+  }
+
+  .aboutContainer {
+   height: auto;
+   margin: 4rem 0 6rem 0;
+  }
+ }
  // for full HD
  @media only screen and (min-width: 1920px) {
   width: auto;
@@ -143,6 +163,42 @@ export const AboutStyle = styled.section`
       }
       .skills {
        line-height: 2.2rem;
+      }
+     }
+    }
+   }
+  }
+ }
+
+ // UHD
+ @media only screen and (min-width: 3840px) {
+  /* width: 2160px; */
+  width: auto;
+  height: auto;
+
+  .aboutPageContainer {
+   width: 2160px;
+   margin: auto;
+  }
+
+  .aboutContainer {
+   height: auto;
+
+   .aboutInfo {
+    margin-top: 3rem;
+    width: 65%;
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+
+    .tech {
+     .techContainer {
+      display: flex;
+      margin-bottom: 1rem;
+
+      h1 {
+       font-size: inherit;
+       width: 30%;
+       position: relative;
       }
      }
     }

@@ -63,4 +63,20 @@ export const NavBarStyle = styled.nav`
    width: 1440px;
   }
  }
+
+ // for Ultra HD (4k)
+ @media only screen and (min-width: 3840px) {
+  .navContainer {
+   width: 2160px;
+   padding: 2rem 0;
+  }
+
+  .logo {
+   font-size: 2.5rem;
+  }
+
+  ul {
+   font-size: 1.9rem;
+  }
+ }
 `;

@@ -4,6 +4,7 @@ import { SecondaryBtn } from "./SecondaryBtn";
 import { ContactStyle } from "./styles/ContactStyle";
 import { useEffect, useState } from "react";
 import { ContactForm } from "./ContactForm";
+import { Title } from "./Title";
 
 export const Contact = ({ height }) => {
  const email = "email@email.com";
@@ -31,9 +32,7 @@ export const Contact = ({ height }) => {
 
  return (
   <ContactStyle height={height} id="contact" clipboard={clipboard} copyText={copyText}>
-   <div className="title">
-    <h1>Contact</h1>
-   </div>
+   <Title height={height} titleText="Contact" />
    <div className="aboutContainer">
     <div className="contactInfo" data-aos="fade-right">
      <h1>Lets Chat!</h1>

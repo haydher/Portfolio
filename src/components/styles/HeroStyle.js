@@ -213,7 +213,7 @@ export const HeroStyle = styled.div`
    width: 400px;
   }
 
-  .memoji {
+  /* .memoji {
    position: absolute;
    display: flex;
    justify-content: center;
@@ -225,12 +225,56 @@ export const HeroStyle = styled.div`
     height: 300px;
     user-select: none;
    }
+  } */
+
+  .memoji {
+   height: 80%;
+
+   img {
+    height: 100%;
+   }
   }
  }
 
  // for Quad HD (2k)
- @media only screen and (min-width: 2560px) {
-  margin: 16rem 0;
+ @media only screen and (min-width: 1920px) and (max-width: 2560px) {
+  margin-top: 20%;
+  .heroLeft {
+   .heading,
+   .title,
+   .description,
+   .heroBtns {
+    margin-bottom: 2.5rem;
+   }
+
+   .heading {
+    font-size: 2.2rem;
+
+    .blur {
+     left: -50%;
+     top: 10%;
+     height: 70vh;
+    }
+   }
+
+   #webDevTitle {
+    width: 35rem;
+    height: 5rem;
+   }
+
+   .description {
+    font-size: 1.2rem;
+   }
+
+   .heroLinks {
+    margin-top: 2.5rem;
+   }
+  }
+ }
+
+ // for Quad HD (2k)
+ @media only screen and (min-width: 2560px) and (max-width: 3840px) {
+  margin-top: 12rem;
   .heroLeft {
    width: 50%;
 
@@ -259,6 +303,53 @@ export const HeroStyle = styled.div`
     font-size: 1.2rem;
    }
 
+   .heroLinks {
+    margin-top: 3rem;
+   }
+  }
+
+  .memoji {
+   height: 35vh !important;
+
+   img {
+    height: 100%;
+   }
+  }
+ }
+
+ // UHD
+ @media only screen and (min-width: 3840px) {
+  width: 2060px;
+
+  .heroLeft {
+   .heading,
+   .title,
+   .description,
+   .heroBtns {
+    margin-bottom: 2.5rem;
+   }
+
+   .heading {
+    font-size: 2.6rem;
+    .blur {
+     height: 90vh;
+    }
+   }
+
+   .title {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+
+    #webDevTitle {
+     width: 70rem;
+     height: 10rem;
+    }
+   }
+
+   .description {
+    font-size: 2rem;
+   }
    .heroLinks {
     margin-top: 3rem;
    }

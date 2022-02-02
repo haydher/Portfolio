@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 // submit form
 export const submitForm = async (form) => {
  const settings = {
@@ -19,4 +21,14 @@ export const submitForm = async (form) => {
   console.log("error submitting form", error);
   return 0;
  }
+};
+
+export const useGetTitleWidth = (ref, titleText) => {
+ const [titleWidth, setTitleWidth] = useState(0);
+
+ useEffect(() => {
+  ref.current !== null && setTitleWidth(ref.current.offsetWidth);
+ }, [ref, titleText]);
+
+ return titleWidth;
 };

@@ -1,14 +1,13 @@
 import { ReactComponent as AboutFrame } from "../assets/icons/aboutFrame.svg";
 import AboutPic from "../assets/imgs/aboutPic.png";
 import { AboutStyle } from "./styles/AboutStyle";
+import { Title } from "./Title";
 
-export const About = (height) => {
+export const About = ({ height }) => {
  return (
   <AboutStyle height={height} id="about">
    <div className="aboutPageContainer">
-    <div className="title">
-     <h1>About Me</h1>
-    </div>
+    <Title height={height} titleText="About Me" />
     <div className="aboutContainer">
      <div className="aboutInfo" data-aos="fade-right">
       <p>

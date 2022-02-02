@@ -75,91 +75,41 @@ export const ProjectsStyle = styled.div`
   }
  }
 
- /*  
  // for full HD
- @media only screen and (min-width: 1920px) {
-  background: green;
-  width: 1440px;
-  justify-content: center;
- }
- // for Quad HD (2k)
- @media only screen and (min-width: 2560px) {
-  background: red;
-  justify-content: center;
- } */
+ @media only screen and (min-width: 1024px) {
+  width: 1000px;
+  margin: 8rem 0 8rem 0;
+  height: auto;
 
- @media only screen and (min-width: 1080px) {
-  background: green;
-  margin: 8rem 0 12rem 0;
-
-  /* .imgContainer {
-   order: 0;
-   height: 100%;
-   width: 70%;
-   display: flex;
-   align-items: center;
-   img {
-    width: 100%;
-   }
-  }
   .projectInfo {
-   width: 30%;
-   display: flex;
-   flex-direction: column;
-   align-items: ${({ side }) => side !== "right" && "flex-end"};
-   margin: auto;
-
    .projectTitle {
-    font-size: 1.3rem;
-    color: ${({ theme }) => theme.textColor};
-    margin-bottom: 2rem;
-
-    span {
-     color: ${({ titleColor }) => titleColor};
-    }
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
    }
 
    .descriptionContainer {
-    background-color: ${({ theme }) => theme.secondaryColor};
-    width: 130%;
-    margin-bottom: 2rem;
-    text-align: ${({ side }) => side !== "right" && "end"};
-    color: ${({ theme }) => theme.textColor};
-    border-radius: 4px;
+    width: 150%;
+    margin-bottom: 3rem;
     padding: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
    }
 
    .techContainer {
-    margin-bottom: 2rem;
-    width: 90%;
-    color: ${({ theme }) => theme.textColor};
-    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
 
     ul {
-     display: flex;
-     justify-content: ${({ side }) => side !== "right" && "flex-end"};
-     flex-wrap: wrap;
-     list-style: none;
-
      li {
-      margin: ${({ side }) => (side === "right" ? "0  1rem 0 0" : "0 0 0 1rem")};
-      padding: 0.5rem 0;
-      :first-child {
-       margin: ${({ side }) => side !== "right" && "0"};
-      }
+      padding: 0.8rem 0;
      }
     }
+   }
+  }
+ }
 
-    span {
-     margin: 1rem;
-     background-color: brown;
-    }
-   }
-   .linksContainer {
-    display: flex;
-   }
-  } */
+ // for full HD
+ @media only screen and (min-width: 1920px) {
+  width: 1400px;
  }
 
  // for Quad HD (2k)
@@ -193,6 +143,33 @@ export const ProjectsStyle = styled.div`
       padding: 0.8rem 0;
      }
     }
+   }
+  }
+ }
+
+ // UHD
+ @media only screen and (min-width: 3840px) {
+  width: 2160px;
+
+  height: auto;
+  margin: 8rem 0 10rem 0;
+
+  .projectInfo {
+   .projectTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+   }
+
+   .descriptionContainer {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    padding: 1.8rem;
+    line-height: 1.9rem;
+   }
+
+   .techContainer {
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
    }
   }
  }

@@ -9,13 +9,19 @@ export const MainStyle = styled.section`
  height: 100vh;
 
  // for full HD
- @media only screen and (min-width: 1920px) {
+ @media only screen and (min-width: 1920px) and (max-width: 2560px) {
   width: 1440px;
-  justify-content: flex-end;
+  justify-content: center;
  }
  // for Quad HD (2k)
- @media only screen and (min-width: 2560px) {
+ @media only screen and (min-width: 2560px) and (max-width: 3840px) {
   width: 1440px;
+  justify-content: center;
+ }
+
+ // UHD
+ @media only screen and (min-width: 3840px) {
+  width: 2060px;
   justify-content: center;
  }
 `;

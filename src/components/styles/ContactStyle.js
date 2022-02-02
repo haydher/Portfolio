@@ -5,29 +5,6 @@ export const ContactStyle = styled.section`
  margin: auto;
  height: 100vh;
 
- .title {
-  position: relative;
-  padding-top: ${({ height }) => height + 20}px;
-  color: ${({ theme }) => theme.textColor};
-
-  h1 {
-   font-size: 2rem;
-  }
-
-  ::after {
-   content: "";
-   position: absolute;
-   top: calc(${({ height }) => height}px + 40px);
-   left: 9rem;
-   transform: translateY(-50%);
-   background-color: ${({ theme }) => theme.textColor};
-   opacity: 0.8;
-   height: 2px;
-   width: 50vw;
-   border-radius: 100px;
-  }
- }
-
  .aboutContainer {
   display: flex;
   justify-content: space-between;
@@ -145,6 +122,31 @@ export const ContactStyle = styled.section`
   }
  }
 
+ @media only screen and (min-width: 1024px) {
+  width: 1000px;
+  height: auto;
+
+  .aboutContainer {
+   margin: 8rem 0 11rem 0;
+
+   .contactInfo {
+    h1 {
+     font-size: 3rem;
+     margin-bottom: 3rem;
+    }
+
+    p {
+     font-size: 1rem;
+    }
+
+    .emailContainer {
+     margin-top: 3rem;
+     width: 60%;
+    }
+   }
+  }
+ }
+
  // for full HD
  @media only screen and (min-width: 1920px) {
   width: 1440px;
@@ -175,11 +177,6 @@ export const ContactStyle = styled.section`
  @media only screen and (min-width: 2560px) {
   width: 1440px;
   height: auto;
-  .title {
-   ::after {
-    width: 49vw;
-   }
-  }
 
   .aboutContainer {
    margin: 10rem 0 11rem 0;
@@ -197,6 +194,59 @@ export const ContactStyle = styled.section`
     .emailContainer {
      margin-top: 3rem;
      width: 60%;
+    }
+   }
+  }
+ }
+
+ // UHD
+ @media only screen and (min-width: 3840px) {
+  width: 2160px;
+  margin: auto;
+  height: auto;
+
+  .aboutContainer {
+   height: auto;
+
+   .contactInfo {
+    h1 {
+     font-size: 3rem;
+     margin-bottom: 3rem;
+    }
+
+    p {
+     font-size: 1.8rem;
+    }
+
+    .emailContainer {
+     width: 55%;
+     margin-top: 3rem;
+     padding: 1.5rem;
+
+     .emailIconContainer {
+      padding: 1rem;
+      margin-right: 5rem;
+     }
+
+     .emailTextContainer {
+      position: relative;
+
+      .emailText {
+       margin-bottom: 8px;
+       font-size: 1.2rem;
+      }
+      .email {
+       font-size: 1.4rem;
+      }
+
+      ::after {
+       font-size: 1.4rem;
+      }
+     }
+    }
+
+    .linksContainer {
+     margin-top: 3rem;
     }
    }
   }

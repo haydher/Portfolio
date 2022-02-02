@@ -210,6 +210,26 @@ export const ContactFormStyle = styled.div`
   }
  }
 
+ // for HD
+ @media only screen and (min-width: 1080px) {
+  width: 1080px;
+
+  padding: 2rem;
+  width: 40%;
+
+  .header {
+   margin-bottom: 2rem;
+  }
+
+  .inputContainer {
+   margin-bottom: 2rem;
+
+   textarea {
+    height: 14rem;
+   }
+  }
+ }
+
  // for full HD
  @media only screen and (min-width: 1920px) {
   width: 1400px;
@@ -226,6 +246,62 @@ export const ContactFormStyle = styled.div`
 
    textarea {
     height: 15rem;
+   }
+  }
+ }
+
+ // UHD
+ @media only screen and (min-width: 3840px) {
+  .header {
+   margin-bottom: 3rem;
+  }
+
+  .flexContainer {
+   .inputContainer {
+    input {
+     font-size: 1.3rem;
+    }
+   }
+  }
+  .inputContainer {
+   margin-bottom: 3rem;
+
+   .placeholder {
+    font-size: 1.3rem;
+   }
+   input,
+   textarea {
+    background-color: ${({ theme }) => theme.bgColor3};
+    padding: 1rem 1.2rem;
+    line-height: 1.5rem;
+   }
+
+   textarea {
+    font-size: 1.3rem;
+    height: 25rem;
+   }
+
+   textarea ~ .placeholder {
+    top: 1.5rem;
+   }
+
+   // animate the placeholder text to the top of form field
+   input:focus ~ .placeholder,
+   textarea:focus ~ .placeholder,
+   input:not(:placeholder-shown) ~ .placeholder,
+   textarea:not(:placeholder-shown) ~ .placeholder {
+    font-size: 1rem;
+   }
+  }
+
+  .sendBtn {
+   .formError p {
+    font-size: 1.3rem;
+   }
+   button {
+    margin-top: 0;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
    }
   }
  }

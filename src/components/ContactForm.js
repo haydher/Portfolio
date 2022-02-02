@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button } from "./Button";
 import { ReactComponent as CheckMark } from "../assets/icons/checkmark.svg";
-import { submitForm } from "../utils";
+import { submitForm } from "./utils";
 import { ContactFormStyle } from "./styles/ContactFormStyle";
 
 export const ContactForm = () => {
