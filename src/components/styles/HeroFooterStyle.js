@@ -68,6 +68,10 @@ export const HeroFooterStyle = styled.div`
   }
  }
 
+ // for tablets
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  margin: 5rem 0 -15rem 0;
+ }
  // for Full HD
  @media only screen and (min-width: 1920px) and (max-width: 2560px) {
   padding: 8rem;

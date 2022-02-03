@@ -75,6 +75,54 @@ export const ProjectsStyle = styled.div`
   }
  }
 
+ //tablets
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  display: flex;
+  height: auto;
+  margin: 4rem 0 6rem 0;
+
+  .imgContainer {
+   order: 0;
+   height: 100%;
+   width: 70%;
+
+   img {
+    width: 100%;
+   }
+  }
+  .projectInfo {
+   width: 40%;
+
+   .projectTitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+   }
+
+   .descriptionContainer {
+    width: 140%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+    font-size: 0.85rem;
+   }
+
+   .techContainer {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 0.7rem;
+
+    ul {
+     li {
+      margin: ${({ side }) => (side === "right" ? "0  0.9rem 0 0" : "0 0 0 0.9rem")};
+      padding: 0.5rem 0;
+      :first-child {
+       margin: ${({ side }) => side !== "right" && "0"};
+      }
+     }
+    }
+   }
+  }
+ }
  // for full HD
  @media only screen and (min-width: 1024px) {
   width: 1000px;
@@ -109,12 +157,12 @@ export const ProjectsStyle = styled.div`
 
  // for full HD
  @media only screen and (min-width: 1920px) {
-  width: 1400px;
+  width: 1440px;
  }
 
  // for Quad HD (2k)
  @media only screen and (min-width: 2560px) {
-  width: 1400px;
+  width: 1440px;
   height: 65vh;
   margin: 0rem 0;
 

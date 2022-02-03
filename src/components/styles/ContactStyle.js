@@ -122,6 +122,51 @@ export const ContactStyle = styled.section`
   }
  }
 
+ // tablet
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  width: 90%;
+  margin: auto;
+  height: auto;
+
+  .aboutContainer {
+   margin: 4rem auto 0 auto;
+   height: auto;
+
+   .contactInfo {
+    width: 50%;
+    padding-right: 1rem;
+
+    h1 {
+     margin-bottom: 2rem;
+    }
+
+    .emailContainer {
+     width: auto;
+     margin-top: 2rem;
+     padding: 1rem;
+     border-radius: 8px;
+     overflow: hidden;
+
+     .emailIconContainer {
+      margin-right: 2rem;
+      border-radius: 6px;
+     }
+
+     .emailTextContainer {
+      .email {
+       font-size: 1rem;
+      }
+     }
+    }
+
+    .linksContainer {
+     margin-top: 2rem;
+    }
+   }
+  }
+ }
+
+ // hd
  @media only screen and (min-width: 1024px) {
   width: 1000px;
   height: auto;

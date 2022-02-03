@@ -8,6 +8,12 @@ export const MainStyle = styled.section`
  width: ${({ theme }) => theme.width};
  height: 100vh;
 
+ // for tablets
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  width: 90%;
+  justify-content: center;
+ }
+
  // for full HD
  @media only screen and (min-width: 1920px) and (max-width: 2560px) {
   width: 1440px;

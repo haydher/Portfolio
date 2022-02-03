@@ -35,7 +35,6 @@ const projectsObj = [
 ];
 
 export const ProjectsContainer = ({ height }) => {
- const title = useRef(null);
  const titleContainer = useRef(null);
 
  useEffect(() => {
@@ -45,17 +44,12 @@ export const ProjectsContainer = ({ height }) => {
   const end = elemHeight.lastChild.offsetHeight + 50;
 
   titleSticky(navHeight, end);
-
-  return () => {
-   // titleSticky.scrollTrigger.kill();
-  };
  }, [height]);
 
  const titleSticky = (navHeight, end) => {
   gsap.registerPlugin(ScrollTrigger);
   gsap.to(titleContainer.current, {
    scrollTrigger: {
-    // trigger: title.current,
     trigger: document.querySelector("#projects .title"),
     pin: true, // pin the trigger element while active
     start: `top ${navHeight - 5}`, // when the top of the trigger hits the top of the viewport
@@ -68,7 +62,6 @@ export const ProjectsContainer = ({ height }) => {
  return (
   <ProjectsContainerStyle ref={titleContainer} id="projects" height={height}>
    <Title height={height} titleText="Projects" />
-   {/* <h1 className="title">Projects</h1> */}
    {projectsObj.map((project, index) => {
     return (
      <Projects

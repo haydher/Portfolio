@@ -9,35 +9,6 @@ export const AboutStyle = styled.section`
   width: ${({ theme }) => theme.width};
   margin: auto;
  }
-
- /* .title {
-  position: relative;
-  padding-top: ${({ height }) => height.height + 20}px;
-  color: ${({ theme }) => theme.textColor};
-  font-size: 2rem;
-  background-color: red;
-
-  h1 {
-   font-size: 2rem;
-   width: fit-content;
-   background-color: purple;
-  }
-
-  ::after {
-   content: "";
-   position: absolute;
-   top: calc(${({ height }) => height.height}px + 40px);
-   left: ${({ titleWidth }) => titleWidth + 20}px;
-   transform: translateY(-50%);
-   background-color: ${({ theme }) => theme.textColor};
-   opacity: 0.8;
-   height: 2px;
-   width: calc(100% - ${({ titleWidth }) => titleWidth + 20}px);
-   border-radius: 100px;
-   background-color: green;
-  }
- } */
-
  .aboutContainer {
   position: relative;
   display: flex;
@@ -64,9 +35,10 @@ export const AboutStyle = styled.section`
      margin-bottom: 1rem;
 
      h1 {
-      font-size: 1rem;
       width: 30%;
-      position: relative;
+      color: ${({ theme }) => theme.primaryColor};
+      font-size: 1rem;
+      font-weight: 600;
      }
      .skills {
       width: 65%;
@@ -108,9 +80,66 @@ export const AboutStyle = styled.section`
   }
  }
 
+ // tablets
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  width: 100%;
+  height: auto;
+
+  .aboutPageContainer {
+   width: 90%;
+   margin: auto;
+  }
+
+  .aboutContainer {
+   margin: 2rem auto auto auto;
+   position: relative;
+   height: auto;
+
+   .aboutInfo {
+    margin-top: 2rem;
+    width: 55%;
+    line-height: 1.7rem;
+
+    .tech {
+     width: 90vw;
+     .techContainer {
+      margin-bottom: 1rem;
+
+      h1 {
+       font-size: 1rem;
+       width: 30%;
+      }
+      .skills {
+       display: flex;
+       flex-wrap: wrap;
+       width: 65%;
+       line-height: 2rem;
+       span {
+        margin-right: 0.9rem;
+       }
+      }
+     }
+    }
+   }
+
+   .aboutPic {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: translate(0, 0);
+    img {
+     position: relative;
+     height: 15rem;
+    }
+    svg {
+     display: none;
+    }
+   }
+  }
+ }
+
  // for HD
  @media only screen and (min-width: 1024px) {
-  /* width: 1080px; */
   width: auto;
   height: auto;
 

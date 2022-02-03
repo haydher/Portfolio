@@ -51,6 +51,28 @@ export const NavBarStyle = styled.nav`
   padding: 0.5rem 1rem;
  }
 
+ // for tablets
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  width: 100%;
+
+  .navContainer {
+   width: 90%;
+   padding: 0.8rem 0;
+  }
+
+  .logo {
+   font-size: 1.1rem;
+  }
+
+  ul {
+   font-size: 0.9rem;
+   font-weight: 600;
+  }
+
+  ul li {
+   margin-left: 2rem;
+  }
+ }
  // for full HD
  @media only screen and (min-width: 1920px) {
   .navContainer {
