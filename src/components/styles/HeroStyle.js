@@ -208,30 +208,96 @@ export const HeroStyle = styled.div`
   align-items: flex-end;
   width: 50%;
 
-  canvas {
-   height: 400px;
-   width: 400px;
-  }
-
-  /* .memoji {
-   position: absolute;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 400px;
-   width: 400px;
-
-   img {
-    height: 300px;
-    user-select: none;
-   }
-  } */
-
   .memoji {
    height: 80%;
 
    img {
     height: 100%;
+   }
+  }
+ }
+
+ // for mobile phones
+ @media only screen and (max-device-width: 768px) {
+  display: flex;
+  flex-direction: column;
+
+  .heroLeft {
+   order: 1;
+   width: 100%;
+   text-align: center;
+
+   .heading,
+   .title,
+   .description,
+   .heroBtns {
+    margin-bottom: 1.5rem;
+   }
+
+   .heading {
+    position: relative;
+    font-size: 1.5rem;
+
+    .blur {
+     display: none;
+    }
+   }
+
+   .title {
+    margin-top: auto;
+
+    #webDevTitle {
+     margin: auto;
+     width: 90%;
+     height: auto;
+    }
+   }
+
+   .description {
+    font-size: 0.8rem;
+   }
+
+   .heroBtns {
+    margin: auto;
+    .CTA {
+     position: relative;
+     color: ${({ theme }) => theme.textColor};
+     font-weight: 500;
+     overflow: hidden;
+     border: 1px solid ${({ theme }) => theme.textColor};
+     cursor: pointer;
+
+     ::before {
+      content: none;
+     }
+     ::after {
+      content: none;
+     }
+    }
+    .resume {
+     display: none;
+     ::before {
+      content: none;
+     }
+    }
+   }
+   .heroLinks {
+    display: none;
+   }
+  }
+
+  .heroRight {
+   order: 0;
+   align-items: center;
+   width: 100%;
+   margin-top: 1.5rem;
+
+   .memoji {
+    height: auto;
+
+    img {
+     height: 100%;
+    }
    }
   }
  }

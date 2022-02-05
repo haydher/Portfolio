@@ -68,6 +68,20 @@ export const HeroFooterStyle = styled.div`
   }
  }
 
+ // for mobile phones
+ @media only screen and (max-device-width: 768px) {
+  padding: 3rem 0 0 0;
+  .circle {
+   display: none;
+   visibility: none;
+  }
+
+  .dot {
+   display: none;
+   visibility: none;
+  }
+ }
+
  // for tablets
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   margin: 5rem 0 -15rem 0;

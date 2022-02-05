@@ -1,12 +1,16 @@
 import { Button } from "./Button";
-import { Canvas } from "./Canvas";
 import { HeroStyle } from "./styles/HeroStyle";
 import { ReactComponent as Title } from "../assets/icons/webDeveloper.svg";
 import { ReactComponent as Arrow } from "../assets/icons/arrow.svg";
 import Memoji from "../assets/imgs/memoji.png";
 import { SecondaryBtn } from "./SecondaryBtn";
+import { useGetScreenWidth } from "./utils";
+import { UserProfile } from "./UserProfile";
 
 export const Hero = () => {
+ const mobileView = useGetScreenWidth();
+ const mobileWidth = 768;
+
  return (
   <HeroStyle>
    <div className="heroLeft">
@@ -34,12 +38,18 @@ export const Hero = () => {
     </div>
    </div>
    <div className="heroRight">
+    {mobileView <= mobileWidth ? (
+     <UserProfile />
+    ) : (
+     <div className="memoji" data-aos="fade-left">
+      <img src={Memoji} alt="face memoji" draggable="false" />
+     </div>
+    )}
     {/* <canvas className="magnet" id="canvas" width="500" height="500"></canvas> */}
     {/* <Canvas /> */}
-    <div className="memoji" data-aos="fade-left">
-     {/* <img src={"imgs/memoji.png"} alt="face memoji" draggable="false" /> */}
+    {/* <div className="memoji" data-aos="fade-left">
      <img src={Memoji} alt="face memoji" draggable="false" />
-    </div>
+    </div> */}
    </div>
   </HeroStyle>
  );

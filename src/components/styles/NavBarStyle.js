@@ -63,7 +63,7 @@ export const NavBarStyle = styled.nav`
   }
 
   .logo {
-   font-size: 1.5rem;
+   font-size: 1rem;
    color: ${({ theme }) => theme.primaryColor};
   }
 
@@ -71,12 +71,10 @@ export const NavBarStyle = styled.nav`
    background: ${({ theme }) => theme.bgColor2};
    position: absolute;
    top: ${({ height }) => height + 10}px;
-   /* display: ${({ menuActive }) => (menuActive ? "block" : "none")}; */
    display: block;
    visibility: ${({ menuActive }) => (menuActive ? "visible" : "hidden")};
    width: 90%;
    list-style: none;
-   font-size: 1.1rem;
    border-radius: 10px;
    transform-origin: top right;
    transform: ${({ menuActive }) => (menuActive ? "scale(1)" : "scale(0)")};
@@ -101,7 +99,7 @@ export const NavBarStyle = styled.nav`
    margin: auto;
    text-align: center;
    padding: 1.5rem 0;
-   font-size: 1.2rem;
+   font-size: 1rem;
   }
 
   ul li:last-child {

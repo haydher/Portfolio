@@ -10,7 +10,8 @@ export const MainStyle = styled.section`
 
  // for mobile phones
  @media only screen and (max-device-width: 768px) {
-  display: none;
+  width: 90%;
+  height: auto;
  }
 
  // for tablets

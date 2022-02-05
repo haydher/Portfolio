@@ -2,6 +2,7 @@ import { ReactComponent as AboutFrame } from "../assets/icons/aboutFrame.svg";
 import AboutPic from "../assets/imgs/aboutPic.png";
 import { AboutStyle } from "./styles/AboutStyle";
 import { Title } from "./Title";
+import { UserProfile } from "./UserProfile";
 
 export const About = ({ height }) => {
  return (
@@ -48,10 +49,11 @@ export const About = ({ height }) => {
        </div>
       </div>
      </div>
-     <div className="aboutPic" data-aos="fade-left">
+     <UserProfile />
+     {/* <div className="aboutPic" data-aos="fade-left">
       <AboutFrame />
       <img src={AboutPic} alt="Author in about section" />
-     </div>
+     </div> */}
     </div>
    </div>
   </AboutStyle>
