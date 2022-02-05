@@ -80,6 +80,11 @@ export const AboutStyle = styled.section`
   }
  }
 
+ // for mobile phones
+ @media only screen and (max-device-width: 768px) {
+  display: none;
+ }
+
  // tablets
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   width: 100%;

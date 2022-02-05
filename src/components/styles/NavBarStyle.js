@@ -51,6 +51,63 @@ export const NavBarStyle = styled.nav`
   padding: 0.5rem 1rem;
  }
 
+ // for phones
+ @media only screen and (max-device-width: 768px) {
+  .navContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 90%;
+   padding: 1rem 0;
+   margin: auto;
+  }
+
+  .logo {
+   font-size: 1.5rem;
+   color: ${({ theme }) => theme.primaryColor};
+  }
+
+  ul {
+   background: ${({ theme }) => theme.bgColor2};
+   position: absolute;
+   top: ${({ height }) => height + 10}px;
+   /* display: ${({ menuActive }) => (menuActive ? "block" : "none")}; */
+   display: block;
+   visibility: ${({ menuActive }) => (menuActive ? "visible" : "hidden")};
+   width: 90%;
+   list-style: none;
+   font-size: 1.1rem;
+   border-radius: 10px;
+   transform-origin: top right;
+   transform: ${({ menuActive }) => (menuActive ? "scale(1)" : "scale(0)")};
+   transition: transform 0.2s cubic-bezier(0.47, 0.68, 0.58, 1.18);
+
+   :after {
+    content: "";
+    background: inherit;
+    position: absolute;
+    top: -10px;
+    right: 6px;
+    height: 30px;
+    width: 30px;
+    border-top-left-radius: 5px;
+    transform: rotate(45deg);
+    pointer-events: none;
+    user-select: none;
+   }
+  }
+
+  ul li {
+   margin: auto;
+   text-align: center;
+   padding: 1.5rem 0;
+   font-size: 1.2rem;
+  }
+
+  ul li:last-child {
+   background-color: transparent;
+  }
+ }
  // for tablets
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   width: 100%;

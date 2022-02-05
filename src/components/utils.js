@@ -23,6 +23,7 @@ export const submitForm = async (form) => {
  }
 };
 
+// get the width of title for each section
 export const useGetTitleWidth = (ref, titleText) => {
  const [titleWidth, setTitleWidth] = useState(0);
 
@@ -31,4 +32,23 @@ export const useGetTitleWidth = (ref, titleText) => {
  }, [ref, titleText]);
 
  return titleWidth;
+};
+
+// get the width of the screen when resize
+export const useGetScreenWidth = () => {
+ const [checkScreenWidth, setCheckScreenWidth] = useState(0);
+
+ const getScreenWidth = (e) => setCheckScreenWidth(e.target.innerWidth);
+
+ useEffect(() => {
+  setCheckScreenWidth(window.innerWidth);
+
+  window.addEventListener("resize", getScreenWidth);
+
+  return () => {
+   window.removeEventListener("resize", getScreenWidth);
+  };
+ }, [getScreenWidth]);
+
+ return checkScreenWidth;
 };

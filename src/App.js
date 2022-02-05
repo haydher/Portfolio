@@ -33,7 +33,7 @@ const App = () => {
   <ThemeProvider theme={darkTheme}>
    <GlobalComponents />
    <div className="App">
-    <Nav id="nav" ref={navRef} />
+    <Nav id="nav" ref={navRef} height={height} />
     <Main />
     <ProjectsContainer height={height} />
     <About height={height} />

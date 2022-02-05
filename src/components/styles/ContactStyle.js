@@ -122,6 +122,11 @@ export const ContactStyle = styled.section`
   }
  }
 
+ // for mobile phones
+ @media only screen and (max-device-width: 768px) {
+  display: none;
+ }
+
  // tablet
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   width: 90%;

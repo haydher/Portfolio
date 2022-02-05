@@ -5,6 +5,11 @@ export const ProjectsContainerStyle = styled.section`
  margin: -3rem auto 0 auto;
  padding-top: 3rem;
 
+ // for mobile phones
+ @media only screen and (max-device-width: 768px) {
+  display: none;
+ }
+
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   width: 90%;
  }
