@@ -24,4 +24,11 @@ export const TitleStyle = styled.div`
   width: calc(100% - ${({ titleWidth }) => titleWidth + 20}px);
   border-radius: 100px;
  }
+
+ @media only screen and (max-device-width: 768px) {
+  h1 {
+   font-size: 1.5rem;
+   width: fit-content;
+  }
+ }
 `;

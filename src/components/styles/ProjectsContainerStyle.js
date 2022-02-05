@@ -7,7 +7,7 @@ export const ProjectsContainerStyle = styled.section`
 
  // for mobile phones
  @media only screen and (max-device-width: 768px) {
-  display: none;
+  width: 90%;
  }
 
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {

@@ -1,8 +1,12 @@
 import { SecondaryBtn } from "./SecondaryBtn";
 import { ProjectsStyle } from "./styles/ProjectsStyle";
+import { useGetScreenWidth } from "./utils";
 
 export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
  const fadeDelay = 50;
+
+ const mobileView = useGetScreenWidth();
+ const mobileWidth = 768;
 
  return (
   <ProjectsStyle titleColor={title[2]} side={side}>
@@ -28,6 +32,7 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
      data-aos={side === "right" ? "fade-right" : "fade-left"}
      data-aos-delay={fadeDelay + 200}
     >
+     {mobileView <= mobileWidth && <p className="techStack">Tech used:</p>}
      <ul>
       {tech.map((tech, index) => {
        return <li key={index}>{tech} </li>;

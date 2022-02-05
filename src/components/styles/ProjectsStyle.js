@@ -75,6 +75,67 @@ export const ProjectsStyle = styled.div`
   }
  }
 
+ // for mobile phones
+ @media only screen and (max-device-width: 768px) {
+  display: block;
+  height: auto;
+  margin: 5rem 0;
+
+  .imgContainer {
+   order: 0;
+   height: auto;
+   width: 100%;
+  }
+  .projectInfo {
+   width: 100%;
+   display: block;
+
+   .projectTitle {
+    margin: 1rem 0;
+    font-size: 1rem;
+   }
+
+   .descriptionContainer {
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0rem;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+    text-align: justify;
+   }
+
+   .techContainer {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 0.8rem;
+
+    .techStack {
+     margin: 1rem 0 0.4rem 0;
+     font-weight: 600;
+     font-size: 0.9rem;
+     color: ${({ theme }) => theme.primaryColor};
+    }
+    ul {
+     display: flex;
+     justify-content: flex-start;
+     flex-wrap: wrap;
+
+     li {
+      margin: 0 0.8rem 0 0;
+      padding: 0.4rem 0;
+      :first-child {
+       margin: 0 0.8rem 0 0;
+      }
+     }
+    }
+   }
+   .linksContainer {
+    display: flex;
+   }
+  }
+ }
+
  //tablets
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   display: flex;

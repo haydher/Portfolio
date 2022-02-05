@@ -17,6 +17,28 @@ export const SecondaryBtnStyle = styled.div`
   }
  }
 
+ @media only screen and (max-device-width: 768px) {
+  margin: 0 1rem 0 0;
+
+  .linkBtn {
+   background-color: ${({ theme }) => theme.secondaryColor};
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0.8rem;
+   border-radius: 5px;
+
+   svg {
+    height: 0.8rem;
+    width: 0.8rem;
+   }
+
+   :before {
+    content: "${({ linkName }) => linkName}";
+    margin-right: 0.6rem;
+   }
+  }
+ }
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .linkBtn {
    padding: 0.6rem;
