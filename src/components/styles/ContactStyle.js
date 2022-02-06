@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContactStyle = styled.section`
+ scroll-margin-top: ${({ height }) => height}px;
  width: ${({ theme }) => theme.width};
  margin: auto;
  height: 100vh;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import blur from "../../assets/imgs/blur.png";
 
 export const AboutStyle = styled.section`
+ scroll-margin-top: ${({ height }) => height}px;
  width: auto;
  height: 100vh;
 

@@ -13,7 +13,7 @@ export const ProjectsContainer = ({ height }) => {
   const elemHeight = titleContainer.current;
   // get the parent element of the div to get the nav
   const navHeight = elemHeight.parentElement.firstChild.offsetHeight;
-  const end = elemHeight.lastChild.offsetHeight + 50;
+  const end = elemHeight.lastChild.offsetHeight;
 
   titleSticky(navHeight, end);
  }, [height]);

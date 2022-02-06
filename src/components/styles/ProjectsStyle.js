@@ -186,7 +186,7 @@ export const ProjectsStyle = styled.div`
  }
  // for full HD
  @media only screen and (min-width: 1024px) {
-  width: 1000px;
+  width: 100%;
   margin: 8rem 0 8rem 0;
   height: auto;
 

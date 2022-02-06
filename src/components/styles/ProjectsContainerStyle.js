@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const ProjectsContainerStyle = styled.section`
+ scroll-margin-top: ${({ height }) => height}px;
  width: ${({ theme }) => theme.width};
- margin: -3rem auto 0 auto;
- padding-top: 3rem;
+ margin: auto;
 
  // for mobile phones
  @media only screen and (max-device-width: 767px) {
