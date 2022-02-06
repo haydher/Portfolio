@@ -210,6 +210,59 @@ export const ContactFormStyle = styled.div`
   }
  }
 
+ // for mobile
+ @media only screen and (max-device-width: 768px) {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+
+  .header {
+   margin-bottom: 2rem;
+   font-size: 1.2rem;
+  }
+
+  .flexContainer {
+   display: block;
+
+   .inputContainer {
+    width: 100%;
+   }
+  }
+
+  .inputContainer {
+   margin-bottom: 2rem;
+  }
+
+  input,
+  textarea {
+   line-height: 1.1rem;
+  }
+
+  textarea {
+   height: 12rem;
+  }
+
+  .sendBtn {
+   display: flex;
+   align-items: center;
+
+   .formError p {
+    font-size: 0.7rem;
+
+    :first-child {
+     margin-bottom: 0.3rem;
+    }
+   }
+   button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+   }
+  }
+ }
+
+ // for tablets
  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   padding: 1.5rem;
   border-radius: 8px;

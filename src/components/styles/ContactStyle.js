@@ -114,17 +114,44 @@ export const ContactStyle = styled.section`
      }
     }
    }
-
-   .linksContainer {
-    display: flex;
-    margin-top: 2.5rem;
-   }
+  }
+  .linksContainer {
+   display: flex;
+   margin-top: 2.5rem;
   }
  }
 
  // for mobile phones
  @media only screen and (max-device-width: 768px) {
-  display: none;
+  width: 90%;
+  margin: auto;
+  height: auto;
+
+  .aboutContainer {
+   display: block;
+   height: auto;
+
+   .contactInfo {
+    h1 {
+     font-size: 1.5rem;
+     margin: 3rem 0 2rem 0;
+    }
+
+    .contactText {
+     font-size: 0.8rem;
+     line-height: 1.1rem;
+    }
+
+    .emailContainer {
+     display: none;
+    }
+
+    .linksContainer {
+     display: flex;
+     margin-top: 2rem;
+    }
+   }
+  }
  }
 
  // tablet

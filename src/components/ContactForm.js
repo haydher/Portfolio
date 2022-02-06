@@ -70,7 +70,8 @@ export const ContactForm = () => {
  };
 
  return (
-  <ContactFormStyle showCheckMark={showCheckMark} data-aos="fade-left">
+  // <ContactFormStyle showCheckMark={showCheckMark} data-aos="fade-left">
+  <ContactFormStyle showCheckMark={showCheckMark}>
    <h1 className="header">Send me a message</h1>
    <form onSubmit={formSubmit}>
     <div className="flexContainer">

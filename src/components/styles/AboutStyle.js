@@ -54,7 +54,54 @@ export const AboutStyle = styled.section`
 
  // for mobile phones
  @media only screen and (max-device-width: 768px) {
-  display: none;
+  width: auto;
+  height: auto;
+
+  .aboutPageContainer {
+   width: 90%;
+  }
+
+  .aboutContainer {
+   display: block;
+   height: auto;
+
+   ::before {
+    content: none;
+   }
+
+   .aboutInfo {
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    text-align: justify;
+
+    .tech {
+     .techContainer {
+      display: block;
+      margin-bottom: 1rem;
+
+      h1 {
+       width: 100%;
+       margin-bottom: 0.6rem;
+       font-size: 0.9rem;
+       font-weight: 600;
+      }
+      .skills {
+       width: 100%;
+       line-height: 1.2rem;
+       text-align: left;
+       span {
+        margin: 0 0.5rem 0 0;
+
+        :last-child {
+         margin: 0;
+        }
+       }
+      }
+     }
+    }
+   }
+  }
  }
 
  // tablets

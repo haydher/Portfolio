@@ -17,6 +17,7 @@ export const SecondaryBtnStyle = styled.div`
   }
  }
 
+ // for mobile
  @media only screen and (max-device-width: 768px) {
   margin: 0 1rem 0 0;
 
@@ -26,7 +27,7 @@ export const SecondaryBtnStyle = styled.div`
    justify-content: center;
    align-items: center;
    padding: 0.8rem;
-   border-radius: 5px;
+   border-radius: ${({ hideBefore }) => !hideBefore && "5px"};
 
    svg {
     height: 0.8rem;
@@ -35,7 +36,9 @@ export const SecondaryBtnStyle = styled.div`
 
    :before {
     content: "${({ linkName }) => linkName}";
+    display: ${({ hideBefore }) => (hideBefore ? "none" : "block")};
     margin-right: 0.6rem;
+    color: ${({ theme }) => theme.textColor};
    }
   }
  }

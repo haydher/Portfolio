@@ -1,10 +1,12 @@
-import { ReactComponent as AboutFrame } from "../assets/icons/aboutFrame.svg";
-import AboutPic from "../assets/imgs/aboutPic.png";
 import { AboutStyle } from "./styles/AboutStyle";
 import { Title } from "./Title";
 import { UserProfile } from "./UserProfile";
+import { useGetScreenWidth } from "./utils";
 
 export const About = ({ height }) => {
+ const mobileView = useGetScreenWidth();
+ const mobileWidth = 768;
+
  return (
   <AboutStyle height={height} id="about">
    <div className="aboutPageContainer">
@@ -49,11 +51,7 @@ export const About = ({ height }) => {
        </div>
       </div>
      </div>
-     <UserProfile />
-     {/* <div className="aboutPic" data-aos="fade-left">
-      <AboutFrame />
-      <img src={AboutPic} alt="Author in about section" />
-     </div> */}
+     {mobileView > mobileWidth && <UserProfile />}
     </div>
    </div>
   </AboutStyle>
