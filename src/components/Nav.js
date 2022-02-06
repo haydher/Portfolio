@@ -2,8 +2,38 @@ import React, { useState } from "react";
 import { Hamburger } from "./Hamburger";
 import { NavBarStyle } from "./styles/NavBarStyle";
 
+const navArr = [
+ {
+  link: "#main",
+  name: "Home",
+  active: true,
+ },
+ {
+  link: "#projects",
+  name: "Projects",
+  active: false,
+ },
+ {
+  link: "#about",
+  name: "About",
+  active: false,
+ },
+ {
+  link: "#contact",
+  name: "Contact",
+  active: false,
+ },
+];
+
 export const Nav = React.forwardRef(({ height }, navRef) => {
  const [menuActive, setMenuActive] = useState(false);
+
+ const [menuList, setMenuList] = useState(navArr);
+
+ const menuClicked = (index) => {
+  setMenuActive(false);
+  setMenuList((val) => val.map((x, idx) => ({ ...x, active: idx === index })));
+ };
 
  return (
   <NavBarStyle height={height} menuActive={menuActive}>
@@ -15,26 +45,13 @@ export const Nav = React.forwardRef(({ height }, navRef) => {
     </div>
     <Hamburger menuActive={menuActive} setMenuActive={setMenuActive} />
     <ul>
-     <li className="active">
-      <a href="#main" onClick={() => setMenuActive(false)}>
-       Home
-      </a>
-     </li>
-     <li>
-      <a href="#projects" onClick={() => setMenuActive(false)}>
-       Projects
-      </a>
-     </li>
-     <li>
-      <a href="#about" onClick={() => setMenuActive(false)}>
-       About
-      </a>
-     </li>
-     <li>
-      <a href="#contact" onClick={() => setMenuActive(false)}>
-       Contact
-      </a>
-     </li>
+     {menuList.map((li, index) => (
+      <li key={index} className={li.active ? "active" : ""}>
+       <a href={li.link} onClick={() => menuClicked(index)}>
+        {li.name}
+       </a>
+      </li>
+     ))}
     </ul>
    </div>
   </NavBarStyle>

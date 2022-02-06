@@ -154,7 +154,7 @@ export const AboutStyle = styled.section`
   height: auto;
 
   .aboutPageContainer {
-   width: 1000px;
+   width: 1080px;
    margin: auto;
   }
 

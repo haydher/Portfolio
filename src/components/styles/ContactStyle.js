@@ -200,7 +200,7 @@ export const ContactStyle = styled.section`
 
  // hd
  @media only screen and (min-width: 1024px) {
-  width: 1000px;
+  width: 1080px;
   height: auto;
 
   .aboutContainer {
