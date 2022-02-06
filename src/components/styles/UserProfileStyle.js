@@ -28,7 +28,7 @@ export const UserProfileStyle = styled.div`
  }
 
  // for mobile
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   width: 65%;
 
   img {

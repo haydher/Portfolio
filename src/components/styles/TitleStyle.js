@@ -25,7 +25,7 @@ export const TitleStyle = styled.div`
   border-radius: 100px;
  }
 
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   h1 {
    font-size: 1.5rem;
    width: fit-content;

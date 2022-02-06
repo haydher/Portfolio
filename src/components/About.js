@@ -5,7 +5,7 @@ import { useGetScreenWidth } from "./utils";
 
 export const About = ({ height }) => {
  const mobileView = useGetScreenWidth();
- const mobileWidth = 768;
+ const mobileWidth = 767;
 
  return (
   <AboutStyle height={height} id="about">
@@ -17,9 +17,9 @@ export const About = ({ height }) => {
        Hi. My name is Ali Haider (Haydher).
        <br></br>
        <br></br>
-       Over 3+ years. I had the opportunity to work in a vast spectrum of web technologies which let me get experience
-       in user interface, testing, debugging, deployment, and numerous other full-stack technologies. This helped me
-       build numerous websites for start-ups and businesses.
+       For over 3+ years, I had the opportunity to work in a vast spectrum of web technologies which let me get
+       experience in the user interface, testing, debugging, deployment, and numerous other full-stack technologies.
+       This helped me build numerous websites for start-ups and businesses.
        <br></br>
        <br></br>I currently work remotely as a freelancer and I am open to new opportunities.
        <br></br>

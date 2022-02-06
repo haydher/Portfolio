@@ -32,7 +32,7 @@ export const Contact = ({ height }) => {
  };
 
  const mobileView = useGetScreenWidth();
- const mobileWidth = 768;
+ const mobileWidth = 767;
 
  return (
   <ContactStyle height={height} id="contact" clipboard={clipboard} copyText={copyText}>

@@ -6,7 +6,7 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
  const fadeDelay = 50;
 
  const mobileView = useGetScreenWidth();
- const mobileWidth = 768;
+ const mobileWidth = 767;
 
  return (
   <ProjectsStyle titleColor={title[2]} side={side}>

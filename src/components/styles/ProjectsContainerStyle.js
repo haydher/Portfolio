@@ -6,7 +6,7 @@ export const ProjectsContainerStyle = styled.section`
  padding-top: 3rem;
 
  // for mobile phones
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   width: 90%;
  }
 

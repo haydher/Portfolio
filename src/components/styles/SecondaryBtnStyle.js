@@ -18,7 +18,7 @@ export const SecondaryBtnStyle = styled.div`
  }
 
  // for mobile
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   margin: 0 1rem 0 0;
 
   .linkBtn {
@@ -39,6 +39,7 @@ export const SecondaryBtnStyle = styled.div`
     display: ${({ hideBefore }) => (hideBefore ? "none" : "block")};
     margin-right: 0.6rem;
     color: ${({ theme }) => theme.textColor};
+    font-size: 0.8rem;
    }
   }
  }

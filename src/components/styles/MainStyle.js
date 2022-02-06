@@ -9,7 +9,7 @@ export const MainStyle = styled.section`
  height: 100vh;
 
  // for mobile phones
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   width: 90%;
   height: auto;
  }

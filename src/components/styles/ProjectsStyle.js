@@ -76,7 +76,7 @@ export const ProjectsStyle = styled.div`
  }
 
  // for mobile phones
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   display: block;
   height: auto;
   margin: 5rem 0;

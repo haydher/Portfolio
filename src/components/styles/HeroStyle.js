@@ -218,7 +218,7 @@ export const HeroStyle = styled.div`
  }
 
  // for mobile phones
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   display: flex;
   flex-direction: column;
 

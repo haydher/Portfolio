@@ -53,7 +53,7 @@ export const AboutStyle = styled.section`
  }
 
  // for mobile phones
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   width: auto;
   height: auto;
 

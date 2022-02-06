@@ -9,7 +9,7 @@ import { UserProfile } from "./UserProfile";
 
 export const Hero = () => {
  const mobileView = useGetScreenWidth();
- const mobileWidth = 768;
+ const mobileWidth = 767;
 
  return (
   <HeroStyle>
@@ -39,17 +39,12 @@ export const Hero = () => {
    </div>
    <div className="heroRight">
     {mobileView <= mobileWidth ? (
-     <UserProfile />
+     <UserProfile dataAos="fade-left" />
     ) : (
      <div className="memoji" data-aos="fade-left">
       <img src={Memoji} alt="face memoji" draggable="false" />
      </div>
     )}
-    {/* <canvas className="magnet" id="canvas" width="500" height="500"></canvas> */}
-    {/* <Canvas /> */}
-    {/* <div className="memoji" data-aos="fade-left">
-     <img src={Memoji} alt="face memoji" draggable="false" />
-    </div> */}
    </div>
   </HeroStyle>
  );

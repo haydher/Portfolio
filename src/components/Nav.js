@@ -16,16 +16,24 @@ export const Nav = React.forwardRef(({ height }, navRef) => {
     <Hamburger menuActive={menuActive} setMenuActive={setMenuActive} />
     <ul>
      <li className="active">
-      <a href="#main">Home</a>
+      <a href="#main" onClick={() => setMenuActive(false)}>
+       Home
+      </a>
      </li>
      <li>
-      <a href="#projects">Projects</a>
+      <a href="#projects" onClick={() => setMenuActive(false)}>
+       Projects
+      </a>
      </li>
      <li>
-      <a href="#about">About</a>
+      <a href="#about" onClick={() => setMenuActive(false)}>
+       About
+      </a>
      </li>
      <li>
-      <a href="#contact">Contact</a>
+      <a href="#contact" onClick={() => setMenuActive(false)}>
+       Contact
+      </a>
      </li>
     </ul>
    </div>

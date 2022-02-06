@@ -69,7 +69,7 @@ export const HeroFooterStyle = styled.div`
  }
 
  // for mobile phones
- @media only screen and (max-device-width: 768px) {
+ @media only screen and (max-device-width: 767px) {
   padding: 3rem 0 0 0;
   .circle {
    display: none;

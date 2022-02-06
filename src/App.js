@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from "react";
 import { ProjectsContainer } from "./components/ProjectsContainer";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 const App = () => {
  useEffect(() => {
@@ -38,6 +39,7 @@ const App = () => {
     <ProjectsContainer height={height} />
     <About height={height} />
     <Contact height={height} />
+    <Footer />
    </div>
   </ThemeProvider>
  );
