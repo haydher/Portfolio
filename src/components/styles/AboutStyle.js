@@ -2,6 +2,7 @@ import styled from "styled-components";
 import blur from "../../assets/imgs/blur.png";
 
 export const AboutStyle = styled.section`
+ scroll-margin-top: ${({ height }) => height}px;
  width: auto;
  height: 100vh;
 
@@ -9,31 +10,6 @@ export const AboutStyle = styled.section`
   width: ${({ theme }) => theme.width};
   margin: auto;
  }
-
- .title {
-  position: relative;
-  padding-top: ${({ height }) => height.height + 20}px;
-  color: ${({ theme }) => theme.textColor};
-  font-size: 2rem;
-
-  h1 {
-   font-size: 2rem;
-  }
-
-  ::after {
-   content: "";
-   position: absolute;
-   top: calc(${({ height }) => height.height}px + 40px);
-   left: 11rem;
-   transform: translateY(-50%);
-   background-color: ${({ theme }) => theme.textColor};
-   opacity: 0.8;
-   height: 2px;
-   width: 47vw;
-   border-radius: 100px;
-  }
- }
-
  .aboutContainer {
   position: relative;
   display: flex;
@@ -60,12 +36,13 @@ export const AboutStyle = styled.section`
      margin-bottom: 1rem;
 
      h1 {
-      font-size: 1rem;
       width: 30%;
-      position: relative;
+      color: ${({ theme }) => theme.primaryColor};
+      font-size: 1rem;
+      font-weight: 600;
      }
      .skills {
-      width: 65%;
+      width: auto;
       line-height: 2rem;
       span {
        margin-right: 0.9rem;
@@ -74,36 +51,119 @@ export const AboutStyle = styled.section`
     }
    }
   }
+ }
 
-  .aboutPic {
-   position: relative;
+ // for mobile phones
+ @media only screen and (max-device-width: 767px) {
+  width: auto;
+  height: auto;
 
-   img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -51%);
+  .aboutPageContainer {
+   width: 90%;
+  }
+
+  .aboutContainer {
+   display: block;
+   height: auto;
+
+   ::before {
+    content: none;
    }
 
-   svg rect:first-child {
-    stroke-dasharray: 606;
-    stroke-dashoffset: 1216;
-    animation: dash 24s linear infinite;
-   }
-   svg rect:last-child {
-    stroke-dasharray: 664;
-    stroke-dashoffset: -1328;
-    animation: dash 24s linear infinite;
-   }
+   .aboutInfo {
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    text-align: justify;
 
-   @keyframes dash {
-    to {
-     stroke-dashoffset: 0;
+    .tech {
+     .techContainer {
+      display: block;
+      margin-bottom: 1rem;
+
+      h1 {
+       width: 100%;
+       margin-bottom: 0.6rem;
+       font-size: 0.9rem;
+       font-weight: 600;
+      }
+      .skills {
+       width: 100%;
+       line-height: 1.2rem;
+       text-align: left;
+       span {
+        margin: 0 0.5rem 0 0;
+
+        :last-child {
+         margin: 0;
+        }
+       }
+      }
+     }
     }
    }
   }
  }
 
+ // tablets
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  width: 100%;
+  height: auto;
+
+  .aboutPageContainer {
+   width: 90%;
+   margin: auto;
+  }
+
+  .aboutContainer {
+   margin: 2rem auto auto auto;
+   position: relative;
+   height: auto;
+
+   .aboutInfo {
+    margin-top: 2rem;
+    width: 55%;
+    line-height: 1.7rem;
+
+    .tech {
+     width: 90vw;
+     .techContainer {
+      margin-bottom: 1rem;
+
+      h1 {
+       font-size: 1rem;
+       width: 30%;
+      }
+      .skills {
+       display: flex;
+       flex-wrap: wrap;
+       width: auto;
+       line-height: 2rem;
+       span {
+        margin-right: 0.9rem;
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+
+ // for HD
+ @media only screen and (min-width: 1024px) {
+  width: auto;
+  height: auto;
+
+  .aboutPageContainer {
+   width: 1080px;
+   margin: auto;
+  }
+
+  .aboutContainer {
+   height: auto;
+   margin: 4rem 0 6rem 0;
+  }
+ }
  // for full HD
  @media only screen and (min-width: 1920px) {
   width: auto;
@@ -122,7 +182,6 @@ export const AboutStyle = styled.section`
 
  // for Quad HD (2k)
  @media only screen and (min-width: 2560px) {
-  /* width: 1400px; */
   height: auto;
 
   .aboutPageContainer {
@@ -143,6 +202,43 @@ export const AboutStyle = styled.section`
       }
       .skills {
        line-height: 2.2rem;
+       width: auto;
+      }
+     }
+    }
+   }
+  }
+ }
+
+ // UHD
+ @media only screen and (min-width: 3840px) {
+  /* width: 2160px; */
+  width: auto;
+  height: auto;
+
+  .aboutPageContainer {
+   width: 2160px;
+   margin: auto;
+  }
+
+  .aboutContainer {
+   height: auto;
+
+   .aboutInfo {
+    margin-top: 3rem;
+    width: 65%;
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+
+    .tech {
+     .techContainer {
+      display: flex;
+      margin-bottom: 1rem;
+
+      h1 {
+       font-size: inherit;
+       width: 30%;
+       position: relative;
       }
      }
     }

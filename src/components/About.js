@@ -1,23 +1,25 @@
-import { ReactComponent as AboutFrame } from "../assets/icons/aboutFrame.svg";
-import AboutPic from "../assets/imgs/aboutPic.png";
 import { AboutStyle } from "./styles/AboutStyle";
+import { Title } from "./Title";
+import { UserProfile } from "./UserProfile";
+import { useGetScreenWidth } from "./utils";
 
-export const About = (height) => {
+export const About = ({ height }) => {
+ const mobileView = useGetScreenWidth();
+ const mobileWidth = 767;
+
  return (
   <AboutStyle height={height} id="about">
    <div className="aboutPageContainer">
-    <div className="title">
-     <h1>About Me</h1>
-    </div>
+    <Title height={height} titleText="About Me" />
     <div className="aboutContainer">
-     <div className="aboutInfo" data-aos="fade-right">
+     <div className="aboutInfo" data-aos={mobileView <= mobileWidth ? "fade-up" : "fade-right"}>
       <p>
        Hi. My name is Ali Haider (Haydher).
        <br></br>
        <br></br>
-       Over 3+ years. I had the opportunity to work in a vast spectrum of web technologies which let me get experience
-       in user interface, testing, debugging, deployment, and numerous other full-stack technologies. This helped me
-       build numerous websites for start-ups and businesses.
+       For over 3+ years, I had the opportunity to work in a vast spectrum of web technologies which let me get
+       experience in the user interface, testing, debugging, deployment, and numerous other full-stack technologies.
+       This helped me build numerous websites for start-ups and businesses.
        <br></br>
        <br></br>I currently work remotely as a freelancer and I am open to new opportunities.
        <br></br>
@@ -49,10 +51,7 @@ export const About = (height) => {
        </div>
       </div>
      </div>
-     <div className="aboutPic" data-aos="fade-left">
-      <AboutFrame />
-      <img src={AboutPic} alt="Author in about section" />
-     </div>
+     {mobileView > mobileWidth && <UserProfile />}
     </div>
    </div>
   </AboutStyle>

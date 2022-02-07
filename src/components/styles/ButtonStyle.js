@@ -18,4 +18,18 @@ export const ButtonStyle = styled.button`
   margin-left: 1rem;
   cursor: pointer;
  }
+
+ @media only screen and (max-device-width: 767px) {
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  margin: 0;
+
+  svg {
+   display: none;
+  }
+ }
+ @media only screen and (min-width: 3840px) {
+  padding: 1.5rem 4rem;
+  font-size: 2.2rem;
+ }
 `;

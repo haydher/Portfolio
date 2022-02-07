@@ -13,9 +13,6 @@ export const GlobalComponents = createGlobalStyle`
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-/* Track */
-
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -37,7 +34,6 @@ export const GlobalComponents = createGlobalStyle`
  }
  body {
   background-color:  ${({ theme }) => theme.bgColor};
+  overflow-x: hidden;
  }
- 
-
 `;

@@ -4,6 +4,8 @@ import { SecondaryBtn } from "./SecondaryBtn";
 import { ContactStyle } from "./styles/ContactStyle";
 import { useEffect, useState } from "react";
 import { ContactForm } from "./ContactForm";
+import { Title } from "./Title";
+import { useGetScreenWidth } from "./utils";
 
 export const Contact = ({ height }) => {
  const email = "email@email.com";
@@ -29,15 +31,16 @@ export const Contact = ({ height }) => {
   setClipboard(true);
  };
 
+ const mobileView = useGetScreenWidth();
+ const mobileWidth = 767;
+
  return (
   <ContactStyle height={height} id="contact" clipboard={clipboard} copyText={copyText}>
-   <div className="title">
-    <h1>Contact</h1>
-   </div>
+   <Title height={height} titleText="Contact" />
    <div className="aboutContainer">
-    <div className="contactInfo" data-aos="fade-right">
+    <div className="contactInfo" data-aos={mobileView <= mobileWidth ? "fade-up" : "fade-right"}>
      <h1>Lets Chat!</h1>
-     <p>Got a question, or proposal, or just want to say hello? Send me a message!</p>
+     <p className="contactText">Got a question, or proposal, or just want to say hello? Send me a message!</p>
 
      <div className="emailContainer" title="Click to copy to clipboard" onClick={copyToClipBoard}>
       <div className="emailIconContainer">
@@ -53,12 +56,22 @@ export const Contact = ({ height }) => {
        </div>
       </div>
      </div>
-     <div className="linksContainer">
-      <SecondaryBtn link="https://github.com/haydher" img="Github" margin="0 1rem 0 0" />
-      <SecondaryBtn link="https://www.linkedin.com/in/haydher/" img="Linkedin" />
-     </div>
+     {mobileView > mobileWidth && (
+      <div className="linksContainer">
+       <SecondaryBtn link="https://github.com/haydher" img="Github" margin="0 1rem 0 0" />
+       <SecondaryBtn link="https://www.linkedin.com/in/haydher/" img="Linkedin" />
+      </div>
+     )}
     </div>
     <ContactForm />
+
+    {mobileView <= mobileWidth && (
+     <div className="linksContainer">
+      <SecondaryBtn link="https://github.com/haydher" img="Github" margin="0 1rem 0 0" hideBefore={true} />
+      <SecondaryBtn link="https://www.linkedin.com/in/haydher/" img="Linkedin" hideBefore={true} />
+      <SecondaryBtn link={`mailto:${email}`} img="email" hideBefore={true} />
+     </div>
+    )}
    </div>
   </ContactStyle>
  );

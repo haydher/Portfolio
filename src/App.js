@@ -10,6 +10,8 @@ import { useEffect, useRef, useState } from "react";
 import { ProjectsContainer } from "./components/ProjectsContainer";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
+import { turnHerokuOn } from "./components/utils";
 
 const App = () => {
  useEffect(() => {
@@ -22,6 +24,9 @@ const App = () => {
   });
 
   getNavHeight();
+
+  // this turns on heroku server that are put to sleep. this ensures servers are on when project is viewed
+  turnHerokuOn();
  }, []);
 
  // get height of nav since fixed. help push down anchor links
@@ -33,11 +38,12 @@ const App = () => {
   <ThemeProvider theme={darkTheme}>
    <GlobalComponents />
    <div className="App">
-    <Nav id="nav" ref={navRef} />
+    <Nav id="nav" ref={navRef} height={height} />
     <Main />
     <ProjectsContainer height={height} />
     <About height={height} />
     <Contact height={height} />
+    <Footer />
    </div>
   </ThemeProvider>
  );
