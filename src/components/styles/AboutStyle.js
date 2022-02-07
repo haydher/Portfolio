@@ -42,7 +42,7 @@ export const AboutStyle = styled.section`
       font-weight: 600;
      }
      .skills {
-      width: 65%;
+      width: auto;
       line-height: 2rem;
       span {
        margin-right: 0.9rem;
@@ -137,7 +137,7 @@ export const AboutStyle = styled.section`
       .skills {
        display: flex;
        flex-wrap: wrap;
-       width: 65%;
+       width: auto;
        line-height: 2rem;
        span {
         margin-right: 0.9rem;
@@ -182,7 +182,6 @@ export const AboutStyle = styled.section`
 
  // for Quad HD (2k)
  @media only screen and (min-width: 2560px) {
-  /* width: 1400px; */
   height: auto;
 
   .aboutPageContainer {
@@ -203,6 +202,7 @@ export const AboutStyle = styled.section`
       }
       .skills {
        line-height: 2.2rem;
+       width: auto;
       }
      }
     }
