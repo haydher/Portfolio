@@ -16,6 +16,7 @@ export const submitForm = async (form) => {
   const req = await fetch(url, settings);
   const body = await req.json();
   if (body.status === 200) return 1;
+  console.log("body", body);
   return 0;
  } catch (error) {
   console.log("error submitting form", error);
