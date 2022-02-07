@@ -46,7 +46,7 @@ export const Nav = React.forwardRef(({ height }, navRef) => {
     <Hamburger menuActive={menuActive} setMenuActive={setMenuActive} />
     <ul>
      {menuList.map((li, index) => (
-      <li key={index} className={li.active ? "active" : ""}>
+      <li key={index} className={li.active && li.name !== "Contact" ? "active" : ""}>
        <a href={li.link} onClick={() => menuClicked(index)}>
         {li.name}
        </a>

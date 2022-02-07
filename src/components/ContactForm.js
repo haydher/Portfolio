@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button } from "./Button";
 import { ReactComponent as CheckMark } from "../assets/icons/checkmark.svg";
-import { submitForm } from "./utils";
+import { submitForm, useGetScreenWidth } from "./utils";
 import { ContactFormStyle } from "./styles/ContactFormStyle";
 
 export const ContactForm = () => {
@@ -69,9 +69,11 @@ export const ContactForm = () => {
   handleSubmit();
  };
 
+ const mobileView = useGetScreenWidth();
+ const mobileWidth = 767;
  return (
   <ContactFormStyle showCheckMark={showCheckMark}>
-   <div className="formContainer" data-aos="fade-left">
+   <div className="formContainer" data-aos={mobileView <= mobileWidth ? "fade-up" : "fade-left"}>
     <h1 className="header">Send me a message</h1>
     <form onSubmit={formSubmit}>
      <div className="flexContainer">

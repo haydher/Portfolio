@@ -12,7 +12,7 @@ export const submitForm = async (form) => {
  };
 
  try {
-  const url = "http://localhost:5000/";
+  const url = `${process.env.REACT_APP_NODEMAILER}`;
   const req = await fetch(url, settings);
   const body = await req.json();
   if (body.status === 200) return 1;
@@ -38,17 +38,24 @@ export const useGetTitleWidth = (ref, titleText) => {
 export const useGetScreenWidth = () => {
  const [checkScreenWidth, setCheckScreenWidth] = useState(0);
 
- const getScreenWidth = (e) => setCheckScreenWidth(e.target.innerWidth);
-
  useEffect(() => {
   setCheckScreenWidth(window.innerWidth);
+
+  const getScreenWidth = (e) => setCheckScreenWidth(e.target.innerWidth);
 
   window.addEventListener("resize", getScreenWidth);
 
   return () => {
    window.removeEventListener("resize", getScreenWidth);
   };
- }, [getScreenWidth]);
+ }, []);
 
  return checkScreenWidth;
+};
+
+export const turnHerokuOn = async () => {
+ // crypto tracker news api
+ await fetch(process.env.REACT_APP_NEWSAPI);
+ // nodemailer for portfolio
+ await fetch(process.env.REACT_APP_NODEMAILER_SERVER);
 };

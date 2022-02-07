@@ -34,5 +34,6 @@ export const GlobalComponents = createGlobalStyle`
  }
  body {
   background-color:  ${({ theme }) => theme.bgColor};
+  overflow-x: hidden;
  }
 `;

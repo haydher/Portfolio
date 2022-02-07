@@ -67,7 +67,8 @@ export const ContactFormStyle = styled.div`
 
    textarea {
     width: 100%;
-    height: 10rem;
+    min-height: 10rem;
+    resize: vertical;
    }
 
    .placeholder {

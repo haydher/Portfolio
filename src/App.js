@@ -11,6 +11,7 @@ import { ProjectsContainer } from "./components/ProjectsContainer";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { turnHerokuOn } from "./components/utils";
 
 const App = () => {
  useEffect(() => {
@@ -23,6 +24,9 @@ const App = () => {
   });
 
   getNavHeight();
+
+  // this turns on heroku server that are put to sleep. this ensures servers are on when project is viewed
+  turnHerokuOn();
  }, []);
 
  // get height of nav since fixed. help push down anchor links

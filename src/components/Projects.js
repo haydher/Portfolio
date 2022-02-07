@@ -10,11 +10,17 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
 
  return (
   <ProjectsStyle titleColor={title[2]} side={side}>
-   <div className="imgContainer" data-aos={side === "left" ? "fade-right" : "fade-left"}>
+   <div
+    className="imgContainer"
+    data-aos={mobileView <= mobileWidth ? "fade-up" : side === "left" ? "fade-right" : "fade-left"}
+   >
     <img src={imgSrc} alt="Background for project" />
    </div>
    <div className="projectInfo">
-    <div className="projectTitle" data-aos={side === "right" ? "fade-right" : "fade-left"}>
+    <div
+     className="projectTitle"
+     data-aos={mobileView <= mobileWidth ? "fade-up" : side === "right" ? "fade-right" : "fade-left"}
+    >
      <h1>
       <span>{title[0]}</span>
       {title[1]}
@@ -22,14 +28,14 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
     </div>
     <div
      className="descriptionContainer"
-     data-aos={side === "right" ? "fade-right" : "fade-left"}
+     data-aos={mobileView <= mobileWidth ? "fade-up" : side === "right" ? "fade-right" : "fade-left"}
      data-aos-delay={fadeDelay + 100}
     >
      <p>{description}</p>
     </div>
     <div
      className="techContainer"
-     data-aos={side === "right" ? "fade-right" : "fade-left"}
+     data-aos={mobileView <= mobileWidth ? "fade-up" : side === "right" ? "fade-right" : "fade-left"}
      data-aos-delay={fadeDelay + 200}
     >
      {mobileView <= mobileWidth && <p className="techStack">Tech used:</p>}
@@ -41,7 +47,7 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
     </div>
     <div
      className="linksContainer"
-     data-aos={side === "right" ? "fade-right" : "fade-left"}
+     data-aos={mobileView <= mobileWidth ? "fade-up" : side === "right" ? "fade-right" : "fade-left"}
      data-aos-delay={fadeDelay + 300}
     >
      {links.map((link, index) => {
@@ -50,7 +56,7 @@ export const Projects = ({ imgSrc, title, description, tech, links, side }) => {
         key={index}
         img={link[0]}
         link={link[1]}
-        margin={side === "right" ? "0 1rem 0 0 " : "  0 0 0 1rem"}
+        margin={mobileView <= mobileWidth ? "fade-up" : side === "right" ? "0 1rem 0 0 " : "  0 0 0 1rem"}
        />
       );
      })}

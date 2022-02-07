@@ -38,7 +38,7 @@ export const Contact = ({ height }) => {
   <ContactStyle height={height} id="contact" clipboard={clipboard} copyText={copyText}>
    <Title height={height} titleText="Contact" />
    <div className="aboutContainer">
-    <div className="contactInfo" data-aos="fade-right">
+    <div className="contactInfo" data-aos={mobileView <= mobileWidth ? "fade-up" : "fade-right"}>
      <h1>Lets Chat!</h1>
      <p className="contactText">Got a question, or proposal, or just want to say hello? Send me a message!</p>
 
@@ -69,7 +69,7 @@ export const Contact = ({ height }) => {
      <div className="linksContainer">
       <SecondaryBtn link="https://github.com/haydher" img="Github" margin="0 1rem 0 0" hideBefore={true} />
       <SecondaryBtn link="https://www.linkedin.com/in/haydher/" img="Linkedin" hideBefore={true} />
-      <SecondaryBtn link="mailto:email@email.com" img="email" hideBefore={true} />
+      <SecondaryBtn link={`mailto:${email}`} img="email" hideBefore={true} />
      </div>
     )}
    </div>

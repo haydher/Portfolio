@@ -12,7 +12,7 @@ export const About = ({ height }) => {
    <div className="aboutPageContainer">
     <Title height={height} titleText="About Me" />
     <div className="aboutContainer">
-     <div className="aboutInfo" data-aos="fade-right">
+     <div className="aboutInfo" data-aos={mobileView <= mobileWidth ? "fade-up" : "fade-right"}>
       <p>
        Hi. My name is Ali Haider (Haydher).
        <br></br>

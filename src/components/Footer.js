@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { FooterStyle } from "./styles/FooterStyle";
 
 export const Footer = () => {
- const [getYear, setGetYear] = useState(new Date().getFullYear());
+ const getYear = new Date().getFullYear();
 
  return (
   <FooterStyle>

@@ -3,6 +3,7 @@ import { HeroStyle } from "./styles/HeroStyle";
 import { ReactComponent as Title } from "../assets/icons/webDeveloper.svg";
 import { ReactComponent as Arrow } from "../assets/icons/arrow.svg";
 import Memoji from "../assets/imgs/memoji.png";
+import Blur from "../assets/imgs/blur.png";
 import { SecondaryBtn } from "./SecondaryBtn";
 import { useGetScreenWidth } from "./utils";
 import { UserProfile } from "./UserProfile";
@@ -17,7 +18,7 @@ export const Hero = () => {
     <div className="heroLeftContainer">
      <div className="heading" data-aos="fade-right">
       <p>Hi, I'm Haydher</p>
-      <img className="blur" src="./imgs/blur.png" alt="background placeholder" draggable="false" />
+      <img className="blur" src={Blur} alt="background placeholder" draggable="false" />
      </div>
      <div className="title">
       <Title id="webDevTitle" />

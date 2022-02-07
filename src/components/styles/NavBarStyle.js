@@ -45,6 +45,7 @@ export const NavBarStyle = styled.nav`
   align-items: center;
   border-radius: 4px;
   font-weight: 500;
+  color: ${({ theme }) => theme.textColor} !important;
  }
 
  ul li a:link {
