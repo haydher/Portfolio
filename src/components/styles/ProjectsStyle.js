@@ -136,6 +136,10 @@ export const ProjectsStyle = styled.div`
   }
  }
 
+<<<<<<< HEAD
+ @media only screen and (min-width: 1080px) {
+  margin: 3rem 0;
+=======
  //tablets
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
   display: flex;
@@ -219,6 +223,7 @@ export const ProjectsStyle = styled.div`
  // for full HD
  @media only screen and (min-width: 1920px) {
   width: 1440px;
+>>>>>>> 6d636346eff2de5c89114b2a3cb9881d77c92868
  }
 
  // for Quad HD (2k)

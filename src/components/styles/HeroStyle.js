@@ -307,6 +307,17 @@ export const HeroStyle = styled.div`
   }
  }
 
+ @media only screen and (min-width: 1080px) {
+  .heroRight {
+   .memoji {
+    height: 70%;
+
+    img {
+     height: 100%;
+    }
+   }
+  }
+ }
  // for tablets
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .heroLeft {

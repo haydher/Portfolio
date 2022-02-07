@@ -86,6 +86,10 @@ export const HeroFooterStyle = styled.div`
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
   margin: 5rem 0 -15rem 0;
  }
+
+ @media only screen and (min-width: 1024px) {
+  padding: 0 0 2rem 0;
+ }
  // for Full HD
  @media only screen and (min-width: 1920px) and (max-width: 2560px) {
   padding: 8rem;

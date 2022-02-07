@@ -303,20 +303,22 @@ export const ContactFormStyle = styled.div`
 
  // for HD
  @media only screen and (min-width: 1080px) {
-  width: 1080px;
-
-  padding: 2rem;
   width: 40%;
 
-  .header {
-   margin-bottom: 2rem;
-  }
+  .formContainer {
+   padding: 2rem;
+   width: 100%;
 
-  .inputContainer {
-   margin-bottom: 2rem;
+   .header {
+    margin-bottom: 2rem;
+   }
 
-   textarea {
-    height: 14rem;
+   .inputContainer {
+    margin-bottom: 2rem;
+
+    textarea {
+     height: 14rem;
+    }
    }
   }
  }
