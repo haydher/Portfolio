@@ -53,7 +53,7 @@ export const NavBarStyle = styled.nav`
  }
 
  // for phones
- @media only screen and (max-device-width: 767px) {
+ @media only screen and (max-width: 767px) {
   .navContainer {
    display: flex;
    justify-content: space-between;
@@ -108,7 +108,7 @@ export const NavBarStyle = styled.nav`
   }
  }
  // for tablets
- @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
   width: 100%;
 
   .navContainer {

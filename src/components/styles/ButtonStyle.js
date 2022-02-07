@@ -19,7 +19,7 @@ export const ButtonStyle = styled.button`
   cursor: pointer;
  }
 
- @media only screen and (max-device-width: 767px) {
+ @media only screen and (max-width: 767px) {
   padding: 0.8rem 2.5rem;
   font-size: 1.1rem;
   margin: 0;

@@ -218,7 +218,7 @@ export const ContactFormStyle = styled.div`
  }
 
  // for mobile
- @media only screen and (max-device-width: 767px) {
+ @media only screen and (max-width: 767px) {
   width: 100%;
 
   .formContainer {
@@ -273,7 +273,7 @@ export const ContactFormStyle = styled.div`
  }
 
  // for tablets
- @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
   width: 50%;
   .formContainer {
    padding: 1.5rem;

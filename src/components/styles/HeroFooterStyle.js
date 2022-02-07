@@ -69,7 +69,7 @@ export const HeroFooterStyle = styled.div`
  }
 
  // for mobile phones
- @media only screen and (max-device-width: 767px) {
+ @media only screen and (max-width: 767px) {
   padding: 3rem 0 0 0;
   .circle {
    display: none;
@@ -83,7 +83,7 @@ export const HeroFooterStyle = styled.div`
  }
 
  // for tablets
- @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
   margin: 5rem 0 -15rem 0;
  }
  // for Full HD

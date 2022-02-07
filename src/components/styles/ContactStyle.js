@@ -123,7 +123,7 @@ export const ContactStyle = styled.section`
  }
 
  // for mobile phones
- @media only screen and (max-device-width: 767px) {
+ @media only screen and (max-width: 767px) {
   width: 90%;
   margin: auto;
   height: auto;
@@ -156,7 +156,7 @@ export const ContactStyle = styled.section`
  }
 
  // tablet
- @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
   width: 90%;
   margin: auto;
   height: auto;
