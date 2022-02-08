@@ -8,7 +8,7 @@ import { Title } from "./Title";
 import { useGetScreenWidth } from "./utils";
 
 export const Contact = ({ height }) => {
- const email = "email@email.com";
+ const email = "haider0612@gmail.com";
 
  // show confirmation when user copies email
  const arr = [". . .", "Copied!", "Copied, again!", "hmmm.. Copied!", "OKK, ITS COPIED!", "Want it in the mail?"];

@@ -3,6 +3,7 @@ import { HeroStyle } from "./styles/HeroStyle";
 import { ReactComponent as Title } from "../assets/icons/webDeveloper.svg";
 import { ReactComponent as Arrow } from "../assets/icons/arrow.svg";
 import { ReactComponent as Website } from "../assets/icons/website.svg";
+import Resume from "../assets/Haydher_Resume.pdf";
 import Memoji from "../assets/imgs/memoji.png";
 import Blur from "../assets/imgs/blur.png";
 import { SecondaryBtn } from "./SecondaryBtn";
@@ -12,7 +13,7 @@ import { UserProfile } from "./UserProfile";
 export const Hero = () => {
  const mobileView = useGetScreenWidth();
  const mobileWidth = 767;
-
+ console.log("Resume", Resume);
  return (
   <HeroStyle>
    <div className="heroLeft">
@@ -31,7 +32,7 @@ export const Hero = () => {
       <a href="#contact">
        <Button btnText="Contact" btnClass="CTA" imgSrc={<Arrow />} />
       </a>
-      <a href="https://s2.q4cdn.com/498544986/files/doc_downloads/test.pdf" target="_blank">
+      <a href={Resume} target="_blank">
        <Button btnText="Resume" btnClass="resume" imgSrc={<Website />} />
       </a>
      </div>
