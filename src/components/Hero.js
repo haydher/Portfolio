@@ -2,6 +2,7 @@ import { Button } from "./Button";
 import { HeroStyle } from "./styles/HeroStyle";
 import { ReactComponent as Title } from "../assets/icons/webDeveloper.svg";
 import { ReactComponent as Arrow } from "../assets/icons/arrow.svg";
+import { ReactComponent as Website } from "../assets/icons/website.svg";
 import Memoji from "../assets/imgs/memoji.png";
 import Blur from "../assets/imgs/blur.png";
 import { SecondaryBtn } from "./SecondaryBtn";
@@ -30,7 +31,9 @@ export const Hero = () => {
       <a href="#contact">
        <Button btnText="Contact" btnClass="CTA" imgSrc={<Arrow />} />
       </a>
-      <Button btnText="Resume" btnClass="resume" />
+      <a href="https://s2.q4cdn.com/498544986/files/doc_downloads/test.pdf" target="_blank">
+       <Button btnText="Resume" btnClass="resume" imgSrc={<Website />} />
+      </a>
      </div>
      <div className="heroLinks" data-aos="fade-right" data-aos-delay="300">
       <SecondaryBtn link="https://github.com/haydher" img="github" margin="0 1rem 0 0" />

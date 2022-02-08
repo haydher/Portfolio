@@ -14,15 +14,6 @@ export const ProjectsContainerStyle = styled.section`
   width: 90%;
  }
 
-<<<<<<< HEAD
-=======
- // HD
- @media only screen and (min-width: 1080px) {
-  width: 1080px;
- }
-
- // FHD
->>>>>>> 6d636346eff2de5c89114b2a3cb9881d77c92868
  @media only screen and (min-width: 1920px) {
   width: 1440px;
  }

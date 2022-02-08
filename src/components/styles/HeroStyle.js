@@ -191,6 +191,11 @@ export const HeroStyle = styled.div`
     :hover {
      color: black;
      transition: color 0.3s ease-out;
+
+     svg path {
+      stroke: black;
+      transition: stroke 0.3s ease-out;
+     }
     }
    }
   }
