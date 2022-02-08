@@ -23,6 +23,7 @@ const App = () => {
    once: true, // whether animation should happen only once - while scrolling down
   });
 
+  // get the height of navBar
   getNavHeight();
 
   // this turns on heroku server that are put to sleep. this ensures servers are on when project is viewed

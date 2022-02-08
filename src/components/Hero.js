@@ -13,7 +13,7 @@ import { UserProfile } from "./UserProfile";
 export const Hero = () => {
  const mobileView = useGetScreenWidth();
  const mobileWidth = 767;
- console.log("Resume", Resume);
+
  return (
   <HeroStyle>
    <div className="heroLeft">
@@ -26,13 +26,13 @@ export const Hero = () => {
       <Title id="webDevTitle" />
      </div>
      <div className="description" data-aos="fade-right" data-aos-delay="100">
-      <p>Full Stack Developer | UI Designer | UX Designer</p>
+      <p>I am a Full-Stack developer and I bring cool ideas to life.</p>
      </div>
      <div className="heroBtns" data-aos="fade-right" data-aos-delay="200">
       <a href="#contact">
        <Button btnText="Contact" btnClass="CTA" imgSrc={<Arrow />} />
       </a>
-      <a href={Resume} target="_blank">
+      <a href={Resume} target="_blank" rel="noreferrer">
        <Button btnText="Resume" btnClass="resume" imgSrc={<Website />} />
       </a>
      </div>
