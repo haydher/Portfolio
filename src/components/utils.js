@@ -57,4 +57,6 @@ export const turnHerokuOn = async () => {
  await fetch(process.env.REACT_APP_NEWSAPI);
  // nodemailer for portfolio
  await fetch(process.env.REACT_APP_NODEMAILER_SERVER);
+ // placeholder
+ await fetch(process.env.REACT_APP_PLACEHOLDER_SERVER);
 };

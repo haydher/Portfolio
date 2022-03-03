@@ -33,7 +33,7 @@ export const projectsObj = [
   imgSrc: Placeholder,
   title: ["Place", "holder", "#4A86E8"],
   description:
-   "Placeholder provides randomly generated JSON data for front-end developers to test their API or use it for showing quick demons or examples of fetch API. Requests can have multiple properties and queries to change what the API responds with.",
+   "Placeholder provides randomly generated JSON data for front-end developers to test their API or use it for showing quick demos or examples of fetch API. Requests can have multiple properties and queries to change what the API responds with.",
   tech: ["Node.js", "Express.js", "EJS", "Heroku", "Unsplash API"],
   links: [
    ["github", "https://github.com/haydher/dev-api"],
