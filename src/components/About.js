@@ -33,13 +33,13 @@ export const About = ({ height }) => {
         <p className="skills">
          <span>HTML</span> <span>CSS</span> <span>JavaScript</span> <span>Node.Js</span>
          <span style={{ whiteSpace: "nowrap" }}>REST API</span>
-         <span>MangoDb</span> <span>Firebase</span>
+         <span>MongoDb</span> <span>Firebase</span>
         </p>
        </div>
        <div className="techContainer">
         <h1>Frameworks & Libraries</h1>
         <p className="skills">
-         <span>ReactJs</span> <span>Redux</span> <span>EJS</span> <span>Mangoose</span> <span>ExpressJS</span>
+         <span>ReactJs</span> <span>Redux</span> <span>EJS</span> <span>Mongoose</span> <span>ExpressJS</span>
          <span>Bootstrap</span> <span>JQuery</span>
         </p>
        </div>
