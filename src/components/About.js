@@ -17,7 +17,7 @@ export const About = ({ height }) => {
        Hi. My name is Ali Haider (Haydher).
        <br></br>
        <br></br>
-       For over 3+ years, I had the opportunity to work in a vast spectrum of web technologies which let me get
+       For over 2+ years, I had the opportunity to work in a vast spectrum of web technologies which let me get
        experience in the user interface, testing, debugging, deployment, and numerous other full-stack technologies.
        This helped me build numerous websites for start-ups and businesses.
        <br></br>
