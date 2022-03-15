@@ -399,7 +399,7 @@ export const HeroStyle = styled.div`
   }
 
   .memoji {
-   height: 30vh !important;
+   height: 20vh !important;
 
    img {
     height: 100%;
