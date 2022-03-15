@@ -214,7 +214,7 @@ export const HeroStyle = styled.div`
   width: 50%;
 
   .memoji {
-   height: 80%;
+   height: 70%;
 
    img {
     height: 100%;
@@ -619,7 +619,7 @@ export const HeroStyle = styled.div`
   }
 
   .memoji {
-   height: 35vh !important;
+   height: 30vh !important;
 
    img {
     height: 100%;
