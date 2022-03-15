@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HeroStyle = styled.div`
  display: flex;
+ margin-top: 5rem;
 
  .heroLeft {
   display: flex;
@@ -217,7 +218,7 @@ export const HeroStyle = styled.div`
    height: 70%;
 
    img {
-    height: 100%;
+    height: 60%;
    }
   }
  }
