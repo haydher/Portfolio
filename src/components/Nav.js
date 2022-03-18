@@ -55,7 +55,7 @@ export const Nav = React.forwardRef(({ height }, navRef) => {
        <a
         href={li.link}
         target={li.name === "Resume" ? "_blank" : "_self"}
-        rel={li.name === "Resume" && "noreferrer"}
+        rel="noreferrer"
         onClick={() => menuClicked(index)}
        >
         {li.name}
