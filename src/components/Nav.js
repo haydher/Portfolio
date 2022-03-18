@@ -19,6 +19,11 @@ const navArr = [
   active: false,
  },
  {
+  link: "https://haydher.com/static/media/Haydher_Resume.de344198c84029b40355.pdf",
+  name: "Resume",
+  active: false,
+ },
+ {
   link: "#contact",
   name: "Contact",
   active: false,
@@ -47,7 +52,7 @@ export const Nav = React.forwardRef(({ height }, navRef) => {
     <ul>
      {menuList.map((li, index) => (
       <li key={index} className={li.active && li.name !== "Contact" ? "active" : ""}>
-       <a href={li.link} onClick={() => menuClicked(index)}>
+       <a href={li.link} target={li.name === "Resume" ? "_blank" : "_self"} onClick={() => menuClicked(index)}>
         {li.name}
        </a>
       </li>
