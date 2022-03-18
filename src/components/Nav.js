@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Hamburger } from "./Hamburger";
 import { NavBarStyle } from "./styles/NavBarStyle";
+import Resume from "../assets/Haydher_Resume.pdf";
 
 const navArr = [
  {
@@ -19,7 +20,7 @@ const navArr = [
   active: false,
  },
  {
-  link: "https://haydher.com/static/media/Haydher_Resume.de344198c84029b40355.pdf",
+  link: Resume,
   name: "Resume",
   active: false,
  },
