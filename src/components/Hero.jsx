@@ -8,7 +8,7 @@ import { useGetScreenWidth } from "./utils";
 import { UserProfile } from "./UserProfile";
 import Blur from "../assets/imgs/blur.png";
 import Memoji from "../assets/imgs/memoji.png";
-import Resume from "../assets/Haydher_Resume.pdf";
+import Resume from "../assets/Ali_Haider_Resume.pdf";
 
 export const Hero = () => {
   const mobileView = useGetScreenWidth();
