@@ -2,8 +2,25 @@ import Game2048 from "../assets/imgs/2048.png";
 import GoCryptoBg from "../assets/imgs/goCrypto.png";
 import NitroBg from "../assets/imgs/nitroBg.png";
 import Placeholder from "../assets/imgs/placeholder.png";
+import Vault from "../assets/imgs/vault.png";
 
 export const projectsObj = [
+  {
+    side: "left",
+    imgSrc: Vault,
+    title: {
+      color: `#0081aa`,
+      themedName: "Secure",
+      secondaryName: " Vault",
+    },
+    description:
+      "Password manager app allows user to store login information securely using their master password as the encryption key to ensure that the server doesn't have access to the data.",
+    tech: ["ReactJs", "Tailwind CSS", "Typescript", "JWT", "Crypto-js", "Node.Js", "MongoDb"],
+    links: [
+      { imgName: "github", url: "https://github.com/haydher/password-manager-app" },
+      { imgName: "website", url: "https://secure-vault.netlify.app/" },
+    ],
+  },
   {
     side: "right",
     imgSrc: GoCryptoBg,
@@ -49,7 +66,7 @@ export const projectsObj = [
     tech: ["Node.js", "Express.js", "EJS", "Heroku", "Unsplash API"],
     links: [
       { imgName: "github", url: "https://github.com/haydher/dev-api" },
-      { imgName: "website", url: "https://placeholder-api-dev.herokuapp.com/" },
+      { imgName: "website", url: "https://placeholder.haydher.repl.co" },
     ],
   },
   {
@@ -64,8 +81,8 @@ export const projectsObj = [
       "Fully functional E-commerce website. Clothing items and other products are picked based on user needs. Fully functioning Admin panel to track remaining stock and update existing stock.",
     tech: ["Node.js", "Express.js", "MongoDb", "Mongoose", "EJS", "Heroku"],
     links: [
-      { imgName: "github", url: "https://github.com/haydher/NitroEngine-Heroku" },
-      { imgName: "website", url: "https://nitroengine.herokuapp.com/" },
+      { imgName: "github", url: "https://github.com/haydher/NitroEngine-E-Commerce" },
+      { imgName: "website", url: "https://nitroengine.haydher.repl.co" },
     ],
   },
 ];
